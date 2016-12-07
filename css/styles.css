@@ -57,14 +57,6 @@ strong {
     width: 100%;
 }
 
-.ndqa-header-logo {
-    /* margin: 0;*/
-    padding: 0;
-    float: left;
-    color: #ffffff;
-    margin: 10px 10px 10px 10px;
-}
-
 .ndqa-header-nav {
     width: auto;
     overflow: hidden;
@@ -75,12 +67,32 @@ strong {
     list-style: none;
 }
 
+.ndqa-header-logo {
+
+    padding: 0;
+    float: left;
+    color: #ffffff;
+    margin: 5px 10px 5px 10px;
+}
+
+
 .ndqa-header-nav-li {
     display: inline-block;
     float: none;
-    padding: 0;
+
     list-style: none;
-    margin: 0 10px 0 10px
+    margin: 0 10px 0 10px;
+
+    /* margin: 10px 10px 10px 10px; */
+
+    text-decoration: none;
+    color: #fff;
+
+    /* padding-right: 23px !important; */
+
+    position: relative;
+    line-height: 1;
+    padding: 5px 10px;
 }
 
 .ndqa-button {
@@ -304,15 +316,15 @@ strong {
 }
 
 .ndqa-select {
-    padding: 6px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
     /* border: 1px solid #ccc; */
-    border-radius: 3.01px;
+    border-radius: 3px;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     font-size: inherit;
     margin: 0;
     max-width: 250px;
-    vertical-align: baseline;
+    vertical-align: bottom;
     width: 100%;
     /* background: #fff;
     color: #333; */
@@ -350,7 +362,9 @@ strong {
 }
 
 #ndqa-test-steps {
-    min-width: 600px;
+    width: 100%;
+    min-width: 800px;
+    margin: 10px 0 0 -125px;
 }
 
 .ndqa-test-steps-table {
@@ -361,7 +375,7 @@ strong {
     font-size: small;
     vertical-align: top;
     width: 100%;
-    margin: 10px 0 0 0;
+    margin: 10px 0 0 -20px;
 
     display: table;
     border-collapse: separate;
@@ -373,6 +387,7 @@ strong {
     border-bottom: 1px solid #ccc;
     display: table-header-group;
     vertical-align: middle;
+    /* margin: 10px 0 0 -5px; */
    /* border-color: inherit; */
 
 }
@@ -381,6 +396,7 @@ strong {
     display: table-row-group;
     vertical-align: middle;
     border-color: inherit;
+    margin: 5px 0 0 5px;
 }
 
 .ndqa-test-steps-table-tbody-tr {
@@ -399,7 +415,7 @@ strong {
 
 .ndqa-test-textarea {
     width: 100%;
-    min-width: 150px;
+    min-width: 200px;
     resize: vertical;
 
     -webkit-appearance: textarea;
@@ -415,7 +431,7 @@ strong {
     border-style: solid;
     border-color: initial;
     border-image: initial;
-    padding: 2px;
+    padding: 1px;
 
     text-rendering: auto;
     color: initial;
@@ -472,7 +488,7 @@ strong {
     box-sizing: border-box;
     clear: both;
     margin: 1px 0 0 0;
-    padding: 4px 0 4px 145px;
+    padding: 4px 0 4px 0px;
     position: relative;
     width: 100%;
 }
@@ -509,3 +525,148 @@ strong {
     bottom: -21px;
 }
 
+.ndqa-issue-container {
+    outline: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+#ndqa-issue-content {
+    background-color: #fff;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.ndqa-issue-edit-form {
+
+}
+
+#ndqa-stalker {
+
+}
+
+.ndqa-issue-header {
+    box-sizing: border-box;
+    background: #f5f5f5;
+    border: 0;
+    clear: both;
+    left: 0;
+    margin: 0;
+    position: relative;
+    padding: 0;
+    right: 0;
+    width: auto;
+    z-index: 100;
+    display: block;
+}
+
+.ndqa-js-stalker {
+
+}
+
+.ndqa-issue-header-content {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.ndqa-page-header-image {
+    white-space: nowrap;
+    width: 1px;
+    box-sizing: border-box;
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    vertical-align: top;
+}
+
+.ndqa-page-header-actions {
+    vertical-align: top;
+    padding-left: 20px;
+    text-align: right;
+    box-sizing: border-box;
+    display: table-cell;
+    margin: 0;
+    /* padding: 0; */
+}
+
+.ndqa-avatar {
+    vertical-align: top;
+    background-color: transparent !important;
+    border: 0 !important;
+    border-radius: 3px !important;
+    box-shadow: none !important;
+    position: relative;
+    height: 48px;
+    width: 48px;
+    box-sizing: border-box;
+    display: inline-block;
+    white-space: nowrap;
+    text-align: left;
+
+}
+
+.ndqa-avatar-inner {
+    height: 48px;
+    width: 48px;
+    display: table-cell;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-align: left;
+
+}
+
+.ndqa-enable-field-inactive {
+    margin-left: -5px;
+    padding: 2px 30px 2px 5px;
+    z-index: 1;
+    margin: 0;
+    box-sizing: border-box;
+    transition: box-shadow 150ms ease-in 0ms;
+    border-radius: 2.01px;
+    cursor: text;
+    display: inline-block;
+    max-width: 100%;
+    box-shadow: 0 0 0 0 transparent;
+    position: relative;
+    vertical-align: top;
+    word-break: break-word;
+    font-size: 24px;
+    line-height: 1.25;
+    color: #333;
+    font-weight: normal;
+    text-transform: none;
+}
+
+.ndqa-command-bar {
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    margin: 0;
+    padding: 10px;
+    clear: both;
+    display: block;
+}
+
+.ndqa-ops-content {
+    margin: 0;
+    clear: both;
+    overflow: hidden;
+    display: block;
+    padding: 0;
+}
+
+.ndqa-ops-menus {
+    display: block;
+    padding-top: 0;
+    clear: both;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
