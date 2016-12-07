@@ -668,5 +668,58 @@ strong {
     width: 100%;
     margin: 0;
     padding: 0;
-    
+
+}
+
+.ndqa-toolbar-split-left {
+    display: inline-block;
+    float: left;
+    margin-left: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.ndqa-toolbar-split-right {
+    display: inline-block;
+    /* float: left; */
+    margin-left: 10px;
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+
+.ndqa-issue-body-content {
+    margin: 0;
+    display: block;
+    border-bottom: 1px solid #ccc;
+    padding: 0 20px 20px;
+}
+
+.ndqa-issue-body {
+    margin-top: 0;
+    display: table;
+    box-sizing: border-box;
+    border-spacing: 0;
+    table-layout: fixed;
+    width: 100%;
+    margin: 10px 0 0 0;
+    padding: 0;
+}
+
+.ndqa-issue-main-column {
+    box-sizing: border-box;
+    display: table-cell;
+    margin: 0;
+    vertical-align: top;
+    padding: 0;
+}
+
+.ndqa-issue-side-column {
+    width: 35%;
+    padding-left: 30px;
+    box-sizing: border-box;
+    display: table-cell;
+    margin: 0;
+    vertical-align: top;
+    padding: 0;
 }
