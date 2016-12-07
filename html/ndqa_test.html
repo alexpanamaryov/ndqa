@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <base target="_top">
-        <link rel="stylesheet" href="nd_styles.css">
+        <link rel="stylesheet" href="../css/styles.css">
     </head>
 </head>
 <body>
@@ -15,16 +15,14 @@
 
         <nav class="ndqa-header" role="navigation">
             <div>
-               <h1 class="ndqa-header-logo">
-
-               </h1>
+               <h1 class="ndqa-header-logo">QA Tool</h1>
 
                 <ul class="ndqa-header-nav">
-                    <li>Test</li>
-                    <li>Test</li>
-                    <li>Test</li>
-                    <li>Test</li>
-                    <li>
+                    <li class="ndqa-header-nav-li">Test</li>
+                    <li class="ndqa-header-nav-li">Test</li>
+                    <li class="ndqa-header-nav-li">Test</li>
+                    <li class="ndqa-header-nav-li">Test</li>
+                    <li class="ndqa-header-nav-li">
                         <input type="button" class="ndqa-button" value="Test">
                     </li>
                 </ul>
@@ -39,7 +37,7 @@
         <header class="ndqa-page-header">
             <div class="ndqa-page-header-inner">
                 <div class="ndqa-page-header-main">
-                    <h1>CREATE NEW TEST</h1>
+                    <h1>NEW TEST</h1>
                 </div>
             </div>
         </header>
@@ -60,7 +58,7 @@
                             </div>
 
                             <div class="ndqa-field-group">
-                                <label for="ndqa-issue-type" class="ndqa-field-group-label">Project</label>
+                                <label for="ndqa-issue-type" class="ndqa-field-group-label">Issue Type</label>
                                 <span class="ndqa-field-value" id="ndqa-issue-type">TEST_ISSUE_TYPE</span>
                             </div>
 
@@ -70,20 +68,20 @@
 
                             <ul class="ndqa-tabs-menu" role="tablist">
 
-                                <li class="ndqa-menu-item" role="presentation">
-                                    <a href="#" id="ndqa-tab-0" class="ndqa-menu-item-tab ndqa-menu-item-tab-active" role="tab" aria-selected="true">
+                                <li class="ndqa-menu-item-tab first ndqa-menu-item-tab-active" role="presentation">
+                                    <a href="#" id="ndqa-tab-0" class="ndqa-menu-item-a" role="tab" aria-selected="true">
                                         <strong>Tab1</strong>
                                     </a>
                                 </li>
 
-                                <li class="ndqa-menu-item" role="presentation">
-                                    <a href="#" id="ndqa-tab-1" class="ndqa-menu-item-tab" role="tab" aria-selected="false">
+                                <li class="ndqa-menu-item-tab" role="presentation">
+                                    <a href="#" id="ndqa-tab-1" class="ndqa-menu-item-a" role="tab" aria-selected="false">
                                         <strong>Tab2</strong>
                                     </a>
                                 </li>
 
-                                <li class="ndqa-menu-item" role="presentation">
-                                    <a href="#" id="ndqa-tab-2" class="ndqa-menu-item-tab" role="tab" aria-selected="false">
+                                <li class="ndqa-menu-item-tab" role="presentation">
+                                    <a href="#" id="ndqa-tab-2" class="ndqa-menu-item-a" role="tab" aria-selected="false">
                                         <strong>Tab3</strong>
                                     </a>
                                 </li>
@@ -92,7 +90,7 @@
 
                             <div id="tab0" class="ndqa-tabs-pane ndqa-tabs-pane-active" role="tabpanel" aria-hidden="false" aria-labelledby="ndqa-tab-0">
                                 <div class="ndqa-field-group">
-                                    <label for="ndqa-test-type-select">Test type</label>
+                                    <label for="ndqa-test-type-select" class="ndqa-field-group-label">Test type</label>
                                     <select class="ndqa-select" name="ndqa-test-type-select" id="ndqa-test-type-select">
                                         <option selected="selected" value="10000">Val 1</option>
                                         <option value="10001">Val 2</option>
@@ -101,7 +99,7 @@
                                 </div>
 
                                 <div class="ndqa-field-group">
-                                    <label for="ndqa-test-steps">Steps</label>
+                                    <label for="ndqa-test-steps" class="ndqa-field-group-label">Steps</label>
                                     <div id="ndqa-test-steps">
                                         <table id="ndqa-test-steps-table" class="ndqa-test-steps-table">
                                             <thead class="ndqa-test-steps-table-thead">
@@ -146,7 +144,7 @@
                         <div class="ndqa-buttons-container">
                             <div class="ndqa-buttons">
                                 <input class="ndqa-button" id="ndqa-test-create-submit" name="Create" type="submit" value="Create">
-                                <a class="ndqa-button aui-button-link-cancel" href="#" id="ndqa-test-create-cancel">Cancel</a>
+                                <a class="ndqa-button ndqa-button-link-cancel" href="#" id="ndqa-test-create-cancel">Cancel</a>
                             </div>
                         </div>
 

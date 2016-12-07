@@ -4,6 +4,10 @@ body {
     font-family: Arial,sans-serif;
     font-size: 14px;
     display: block;
+    min-width: 990px;
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -12,6 +16,7 @@ h1 {
     color: #333;
     font-weight: normal;
     text-transform: none;
+    margin: 0;
 }
 
 tr {
@@ -37,22 +42,27 @@ strong {
     color: #333;
 }
 
+.first {
+    margin-left: 20px;
+}
+
 .ndqa-header {
     background: #205081;
     color: #fff;
-    border-bottom-color: #2e3d54;
     border-bottom: 1px solid #2e3d54;
     box-sizing: border-box;
     padding: 0 10px;
-    clear: both;
+    /*clear: both;*/
     float: left;
     width: 100%;
 }
 
 .ndqa-header-logo {
-    margin: 0;
+    /* margin: 0;*/
     padding: 0;
     float: left;
+    color: #ffffff;
+    margin: 10px 10px 10px 10px;
 }
 
 .ndqa-header-nav {
@@ -65,9 +75,17 @@ strong {
     list-style: none;
 }
 
+.ndqa-header-nav-li {
+    display: inline-block;
+    float: none;
+    padding: 0;
+    list-style: none;
+    margin: 0 10px 0 10px
+}
+
 .ndqa-button {
     color: #fff;
-    background-color: #3b7fc4;
+   /* background-color: #3b7fc4; */
     background: #3572b0;
     box-shadow: none;
     border: 0;
@@ -76,7 +94,7 @@ strong {
     -webkit-font-smoothing: antialiased;
     padding: 4px 10px;
     box-sizing: border-box;
-    border-radius: 3.01px;
+    border-radius: 3px;
     cursor: pointer;
     display: inline-block;
     font-family: inherit;
@@ -89,28 +107,35 @@ strong {
 
 .ndqa-button-link-cancel {
     margin-left: 9px;
-    padding-left: 0;
-    padding-right: 0;
     font-size: 14px;
-    color: #3b73af;
     background: transparent;
     border-color: transparent;
     color: #3572b0;
-    padding: 4px 0;
     text-decoration: none;
     box-shadow: none;
-
     cursor: pointer;
-    font-size: 14px;
     display: inline-block;
     padding: 5px 10px;
     vertical-align: baseline;
 }
 
+#content {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    clear: both;
+    position: relative;
+    display: block;
+}
+
 .ndqa-page-header {
-    width: 800px;
+    width: 850px;
     margin-left: auto;
     margin-right: auto;
+
+    margin-top: 0;
+    padding: 20px;
+
 }
 
 .ndqa-page-header-inner {
@@ -119,6 +144,8 @@ strong {
     display: table;
     table-layout: auto;
     width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .ndqa-page-header-main {
@@ -131,18 +158,18 @@ strong {
 }
 
 .ndqa-page-panel {
-    border-radius: 5px;
-    border-width: 1px;
+   /* border-radius: 5px;
+    border-width: 1px; */
     width: 100%;
-    max-width: 1024px;
-    min-width: 800px;
+    max-width: 850px;
+    min-width: 850px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
     background: #fff;
-    border: 1px solid #ccc;
-    border-left-width: 0;
-    border-right-width: 0;
+    border: 1px solid #494949;
+    /* border-left-width: 1px;
+    border-right-width: 1px; */
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     clear: both;
@@ -150,7 +177,6 @@ strong {
     /* margin: 20px 0 0 0; */
     padding: 0;
     position: relative;
-    /* width: 100%; */
 }
 
 .ndqa-page-panel-inner {
@@ -158,8 +184,8 @@ strong {
     display: table;
     table-layout: fixed;
     width: 100%;
-    margin: 0;
-    padding: 0;
+    /*margin: 0;
+    padding: 0;*/
 }
 
 .ndqa-page-panel-content {
@@ -170,8 +196,8 @@ strong {
 }
 
 .ndqa-form {
-    margin-top: 0;
-    margin: 20px 0 0 0;
+   /* margin-top: 0;
+    margin: 20px 0 0 0; */
     position: relative;
     padding: 0;
     display: block;
@@ -186,7 +212,7 @@ strong {
 .ndqa-field-group {
     box-sizing: border-box;
     clear: both;
-    padding: 4px 0 4px 145px;
+    padding: 4px 10px 5px 145px;
     position: relative;
     margin: 1px 0;
     width: 100%;
@@ -213,7 +239,8 @@ strong {
 .ndqa-horizontal-tabs {
     font-size: 14px;
     line-height: 1.46;
-    margin: 10px 0 0 0;
+    margin: 10px 0 10px 0;
+    display: block;
 }
 
 .ndqa-tabs-menu {
@@ -223,46 +250,51 @@ strong {
     vertical-align: top;
     width: 100%;
     list-style-type: disc;
-    -webkit-margin-before: 1em;
+    /*-webkit-margin-before: 1em;
     -webkit-margin-after: 1em;
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
-    -webkit-padding-start: 40px;
+    -webkit-padding-start: 0px;*/
 }
 
-.ndqa-menu-item {
-    margin-left: 20px;
+.ndqa-menu-item-tab {
+    /*margin-left: 20px; */
     background: #eee;
     display: block;
     float: left;
     margin: 0;
 }
 
-.ndqa-menu-item-tab {
-    border-top-left-radius: 3px;
-    border-left: 1px solid #ccc;
-    display: block;
-    border-right: 1px solid #ccc;
-    border-top: 1px solid #ccc;
-    padding: 5px 10px 4px 10px;
-    text-decoration: none;
-    background: #e9e9e9;
-    color: #333;
-    font-weight: normal;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    cursor: pointer;
-}
-
 .ndqa-menu-item-tab-active {
+    background: #fff;
     border-bottom: 1px solid #fff;
     margin-bottom: -1px;
     position: relative;
+    margin-left: 20px;
+}
+
+.ndqa-menu-item-a {
+    display: block;
+    border-top-left-radius: 3px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    /* padding: 5px 10px 4px 10px; */
+    padding: 5px 15px 5px 15px;
+    text-decoration: none;
+   /* background: #e9e9e9;*/
+    color: #333;
+    font-weight: normal;
+    text-overflow: ellipsis;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    min-width: 50px;
 }
 
 .ndqa-tabs-pane {
     border-top: 1px solid #ccc;
-    display: none;
+    display: block;
     margin: 0;
     padding: 0;
 }
@@ -273,7 +305,7 @@ strong {
 
 .ndqa-select {
     padding: 6px 5px 5px 5px;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     border-radius: 3.01px;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -282,8 +314,8 @@ strong {
     max-width: 250px;
     vertical-align: baseline;
     width: 100%;
-    background: #fff;
-    color: #333;
+    /* background: #fff;
+    color: #333; */
     font-family: inherit;
 
     background-color: rgb(248, 248, 248);
@@ -293,20 +325,20 @@ strong {
     border-image: initial;
 
     -webkit-appearance: menulist;
-    box-sizing: border-box;
     align-items: center;
     white-space: pre;
     -webkit-rtl-ordering: logical;
-    color: black;
-    background-color: white;
     cursor: default;
+
+    color: black;
+    /* background-color: white;
     border-width: 1px;
     border-style: solid;
     border-color: initial;
-    border-image: initial;
+    border-image: initial; */
 
     text-rendering: auto;
-    color: initial;
+
     letter-spacing: normal;
     word-spacing: normal;
     text-transform: none;
@@ -314,8 +346,7 @@ strong {
     text-shadow: none;
     display: inline-block;
     text-align: start;
-    margin: 0em 0em 0em 0em;
-    font: 11px BlinkMacSystemFont;
+   /* font: 11px BlinkMacSystemFont; */
 }
 
 #ndqa-test-steps {
@@ -323,8 +354,8 @@ strong {
 }
 
 .ndqa-test-steps-table {
-    border-collapse: collapse;
-    border-spacing: 0;
+   /* border-collapse: collapse; */
+   /* border-spacing: 0; */
     word-wrap: break-word;
     overflow: scroll;
     font-size: small;
@@ -342,7 +373,7 @@ strong {
     border-bottom: 1px solid #ccc;
     display: table-header-group;
     vertical-align: middle;
-    border-color: inherit;
+   /* border-color: inherit; */
 
 }
 
@@ -366,17 +397,17 @@ strong {
     display: table-cell;
 }
 
-.ndqa-test-step-textarea {
+.ndqa-test-textarea {
     width: 100%;
-    min-width: 90px;
-    resize: both;
+    min-width: 150px;
+    resize: vertical;
 
     -webkit-appearance: textarea;
     background-color: white;
     -webkit-rtl-ordering: logical;
     user-select: text;
     flex-direction: column;
-    resize: auto;
+
     cursor: auto;
     white-space: pre-wrap;
     word-wrap: break-word;
@@ -430,13 +461,13 @@ strong {
     text-transform: none;
     text-indent: 0px;
     text-shadow: none;
-    font: 11px BlinkMacSystemFont;
+   /* font: 11px BlinkMacSystemFont; */
 }
 
 .ndqa-buttons-container {
     border-top: 1px solid #ccc;
-    margin-top: 20px;
-    padding-top: 20px;
+    /* margin-top: 20px;
+    padding-top: 20px; */
 
     box-sizing: border-box;
     clear: both;
@@ -465,7 +496,7 @@ strong {
     color: #707070;
     font-size: 12px;
     line-height: 1.66666666666667;
-    margin: 20px 0;
+   /* margin: 20px 0; */
     padding: 0 10px 21px 10px;
     min-height: 44px;
     text-align: center;
