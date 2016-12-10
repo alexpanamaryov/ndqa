@@ -723,3 +723,118 @@ strong {
     vertical-align: top;
     padding: 0;
 }
+
+.ndqa-module-toggle-wrap {
+    border-top: none;
+    margin-top: 15px;
+    padding-top: 15px;
+    box-sizing: border-box;
+}
+
+.ndqa-mod-header {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.ndqa-mod-content {
+    margin-top: 5px;
+    padding-left: 10px;
+    display: block;
+}
+
+#ndqa-raven-test-details {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.ndqa-property-list {
+    display: block;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.ndqa-item-test-type {
+    margin-bottom: 10px;
+    margin: 1px 0 0 0;
+    padding: 0;
+    position: relative;
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.ndqa-wrap {
+    padding: 0 10px 0 150px;
+    margin: 0;
+}
+
+.ndqa-test-type-field {
+    visibility: visible;
+    position: relative;
+    cursor: text;
+    outline-color: #fff;
+    padding: 2px;
+    display: inline-block;
+    margin: 0;
+}
+
+.ndqa-manual-steps {
+    margin-bottom: 10px;
+    margin: 1px 0 0 0;
+    padding: 0;
+    position: relative;
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.ndqa-test-manual-steps-field {
+    overflow: auto;
+    margin-left: 0;
+    margin-top: 10px;
+    clear: both;
+}
+
+.ndqa-manual-test-steps-table {
+    margin-top: 0;
+    vertical-align: top;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 10px 0 0 0;
+    font-size: small;
+    display: table;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+.ndqa-test-step-row {
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    color: #333;
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    border-collapse: collapse;
+    font-size: small;
+}
+
+.ndqa-manual-test-steps-table-order {
+    height: 100%;
+    padding: 7px 5px;
+    width: 8px;
+    text-align: left;
+    vertical-align: top;
+    display: table-cell;
+}
+
+.ndqa-manual-test-steps-table-draghandle {
+    display: inline-block;
+    width: 8px;
+    height: 100%!important;
+    min-height: 24px;
+    margin-bottom: -6px;
+    cursor: move;
+    background-color: black;
+    text-align: left;
+}
