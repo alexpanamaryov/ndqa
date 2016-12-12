@@ -38,85 +38,86 @@
 
         <div class="main-section-header">
             <header>
-                <strong>Project: NAME</strong>
+
+                <label for="project-name">Project</label>
+                <span id="project-name"><b>TEST</b></span>
+
+               <!-- <select id="project-selector">
+                    <option selected="selected">Project 1</option>
+                    <option>Project </option>
+                    <option>Project </option>
+                    <option>Project </option>
+                </select> -->
+
             </header>
         </div>
 
-        <div class="main-content">
+        <div class="main-tabs-pane">
 
-            <article class="horizontal-tabs">
+            <article class="tabs">
+
+
 
                 <section id="summary-tab">
-                    <h2><a href="#summary-tab" role="tab" aria-selected="false"><strong>Summary</strong></a></h2>
-                    <div id="summary-tab-pane" class="tab-pane" role="tabpanel" aria-hidden="true" aria-labelledby="summary-tab">
-                        <strong>SUMMARY TAB CONTENT</strong>
-                    </div>
+                    <h2><a href="#summary-tab">Summary</a></h2>
+                    <p id="summary-tab-panel">
+                        <div class="tab-content">
+                            <strong>SUMMARY TAB CONTENT</strong>
+                        </div>
+                    </p>
                 </section>
 
                 <section id="pm-tab">
-                    <h2><a href="#pm-tab" role="tab" aria-selected="false"><strong>PM</strong></a></h2>
-                    <div id="pm-tab-pane" class="tab-pane" role="tabpanel" aria-hidden="true" aria-labelledby="pm-tab">
-                        <strong>PM TAB CONTENT</strong>
-                    </div>
+                    <h2><a href="#pm-tab">PM</a></h2>
+                    <p id="pm-tab-panel">
+                        <div class="tab-content">
+                            <strong>PM TAB CONTENT</strong>
+                        </div>
+                    </p>
                 </section>
 
                 <section id="dev-tab">
-                    <h2><a href="#dev-tab" role="tab" aria-selected="false"><strong>Development</strong></a></h2>
-                    <div id="dev-tab-pane" class="tab-pane" role="tabpanel" aria-hidden="true" aria-labelledby="dev-tab">
-                        <strong>DEVELOPMENT TAB CONTENT</strong>
-                    </div>
+                    <h2><a href="#dev-tab">DEV</a></h2>
+                    <p id="dev-tab-panel">
+                        <div class="tab-content">
+                            <strong>DEV TAB CONTENT</strong>
+                        </div>
+                    </p>
                 </section>
 
                 <section id="qa-tab">
-                    <h2><a href="#qa-tab" role="tab" aria-selected="true" class="active-tab"><strong>QA</strong></a></h2>
-                    <div id="qa-tab-pane" class="tab-pane active-tab-pane" role="tabpanel" aria-hidden="false" aria-labelledby="qa-tab">
-                        <strong>QA TAB CONTENT</strong>
-                    </div>
+                    <h2 id="main-tabs-header"><a href="#qa-tab">QA</a></h2>
+                    <p id="qa-tab-panel">
+                        <div class="tab-content">
+
+                            <div class="inner-tabs-pane">
+                                <article class="inner-tabs">
+                                    <section id="qa-tests-tab">
+                                        <h2 id="inner-tabs-header"><a href="#qa-tests-tab">Tests</a></h2>
+                                            <p id="qa-tests-tab-panel">
+                                                <div class="qa-tests-tab-content">
+                                                    <strong>TESTS TAB CONTENT</strong>
+                                                </div>
+                                            </p>
+                                    </section>
+                                </article>
+                            </div>
+
+                        </div>
+                    </p>
                 </section>
 
                 <section id="ci-tab">
-                    <h2><a href="#ci-tab" role="tab" aria-selected="false"><strong>CI</strong></a></h2>
-                    <div id="ci-tab-pane" class="tab-pane" role="tabpanel" aria-hidden="true" aria-labelledby="ci-tab">
-                        <strong>CI TAB CONTENT</strong>
-                    </div>
+                    <h2><a href="#ci-tab">CI</a></h2>
+                    <p id="ci-tab-panel">
+                        <div class="tab-content">
+                             <strong>CI TAB CONTENT</strong>
+                        </div>
+                    </p>
                 </section>
 
+
             </article>
-
-           <!-- <div class="horizontal-tabs">
-
-                <ul>
-
-                    <li role="presentation"><a href="#pm-tab-pane" id="pm-tab" role="tab" aria-selected="false"><strong>PM</strong></a></li>
-                    <li role="presentation"><a href="#dev-tab-pane" id="dev-tab" role="tab" aria-selected="false"><strong>Development</strong></a></li>
-                    <li role="presentation"><a href="#qa-tab-pane" id="qa-tab" role="tab" aria-selected="true" class="active-tab"><strong>QA</strong></a></li>
-                    <li role="presentation"><a href="#ci-tab-pane" id="ci-tab" role="tab" aria-selected="false"><strong>CI</strong></a></li>
-                    <li role="presentation"><a href="#summary-tab-pane" id="summary-tab" role="tab" aria-selected="false"><strong>Summary</strong></a></li>
-
-                </ul>
-
-
-                <div id="pm-tab-pane" class="tab-pane" role="tabpanel" aria-hidden="true" aria-labelledby="pm-tab">
-                    <strong>PM TAB CONTENT</strong>
-                </div>
-
-                <div id="dev-tab-pane" class="tab-pane" role="tabpanel" aria-hidden="true" aria-labelledby="dev-tab">
-                    <strong>DEVELOPMENT TAB CONTENT</strong>
-                </div>
-
-                <div id="qa-tab-pane" class="tab-pane active-tab-pane" role="tabpanel" aria-hidden="false" aria-labelledby="qa-tab">
-                    <strong>QA TAB CONTENT</strong>
-                </div>
-
-                <div id="summary-tab-pane" class="tab-pane" role="tabpanel" aria-hidden="true" aria-labelledby="summary-tab">
-                    <strong>SUMMARY TAB CONTENT</strong>
-                </div>
-
-                <div id="ci-tab-pane" class="tab-pane" role="tabpanel" aria-hidden="true" aria-labelledby="ci-tab">
-                    <strong>CI TAB CONTENT</strong>
-                </div>
-
-            </div> -->
 
         </div>
 
