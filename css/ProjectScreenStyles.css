@@ -127,7 +127,7 @@ body {
     padding: 0;
 }
 
-.tabcontent {
+.tab-panel {
     display: none;
     padding: 0;
     margin: 0;
@@ -153,23 +153,19 @@ body {
 
 .active-tab {
     border-bottom: 1px solid #fff;
-    margin-bottom: -1px;
+    margin-bottom: -2px;
     position: relative;
 }
 
 .tablinks {
     display: block;
-
     border-top-left-radius: 3px;
     border: 1px solid #ccc;
-
+    border-bottom: none;
     padding: 5px 10px 4px 10px;
     text-decoration: none;
-
     color: #afafaf;
-
     text-align: center;
-
     font-weight: normal;
     text-overflow: ellipsis;
     white-space: nowrap;

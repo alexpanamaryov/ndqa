@@ -1,7 +1,7 @@
 function openTab(evt, tabName) {
     "use strict";
 
-    var tabcontent = document.getElementsByClassName("tabcontent");
+    var tabPanels = document.getElementsByClassName("tab-panel");
 
     var tablinks = document.getElementsByClassName("tablinks");
 
@@ -11,8 +11,8 @@ function openTab(evt, tabName) {
 
     /* tab inactivation */
 
-    for(var i=0; i<tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+    for(var i=0; i<tabPanels.length; i++) {
+        tabPanels[i].style.display = "none";
         tabs[i].className = tabs[i].className.replace(" active-tab", "");
         tablinks[i].className = tablinks[i].className.replace(" active-tab-link", "");
     }
@@ -20,8 +20,7 @@ function openTab(evt, tabName) {
     /* tab activation */
 
     document.getElementById(tabName).style.display = "block";
-    /*evt.currentTarget.className += " active";*/
-
-    evt.target.parentNode.className += " active-tab";
     evt.currentTarget.className += " active-tab-link";
+    /*evt.target.parentNode.className += " active-tab";*/
+    evt.currentTarget.parentNode.className += " active-tab";
 }
