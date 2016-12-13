@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <head>
-        <meta charset="UTF-8">
-        <base target="_top">
-        <title>Project Screen</title>
-        <link rel="stylesheet" href="../css/ProjectScreenStyles.css">
-    </head>
+    <meta charset="UTF-8">
+    <base target="_top">
+    <title>Project Screen</title>
+    <link rel="stylesheet" href="../css/ProjectScreenStyles.css">
 </head>
 <body>
 
@@ -18,7 +16,7 @@
         <div>
 
             <div>
-                <h1>Norse Digital</h1>
+                <h1>App Avatar</h1>
 
                 <ul>
                     <li><a href="#">Projects</a></li>
@@ -54,7 +52,38 @@
 
         <div class="main-tabs-pane">
 
-            <article class="tabs">
+            
+                <ul class="tabs">
+                    <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'Summary')">Summary</a></li>
+                    <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'PM')">PM</a></li>
+                    <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'DEV')">DEV</a></li>
+                    <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'QA')" id="defaultTab">QA</a></li>
+                </ul>
+
+
+
+                <div id="Summary" class="tabcontent">
+                    <h3>Summary</h3>
+                    <p>Summary content</p>
+                </div>
+
+                <div id="PM" class="tabcontent">
+                    <h3>PM</h3>
+                    <p>PM content</p>
+                </div>
+
+                <div id="DEV" class="tabcontent">
+                    <h3>DEV</h3>
+                    <p>DEV content</p>
+                </div>
+
+                <div id="QA" class="tabcontent">
+                    <h3>QA</h3>
+                    <p>QA content</p>
+                </div>
+
+
+            <!-- <article class="tabs">
 
 
 
@@ -90,18 +119,7 @@
                     <p id="qa-tab-panel">
                         <div class="tab-content">
 
-                            <div class="inner-tabs-pane">
-                                <article class="inner-tabs">
-                                    <section id="qa-tests-tab">
-                                        <h2 id="inner-tabs-header"><a href="#qa-tests-tab">Tests</a></h2>
-                                            <p id="qa-tests-tab-panel">
-                                                <div class="qa-tests-tab-content">
-                                                    <strong>TESTS TAB CONTENT</strong>
-                                                </div>
-                                            </p>
-                                    </section>
-                                </article>
-                            </div>
+
 
                         </div>
                     </p>
@@ -117,7 +135,7 @@
                 </section>
 
 
-            </article>
+            </article> -->
 
         </div>
 
@@ -129,6 +147,12 @@
 
 
 </div>
+
+<script src="../js/tabs.js"></script>
+
+<script>
+    document.getElementById("defaultTab").click();
+</script>
 
 </body>
 </html>
