@@ -3,19 +3,25 @@ function openTab(evt, tabName) {
 
     var tabcontent = document.getElementsByClassName("tabcontent");
 
-    var i=0;
-
-    for(i; i<tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-
     var tablinks = document.getElementsByClassName("tablinks");
 
-    for(i=0; i<tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    var tabs = document.getElementsByClassName("tab");
+
+
+
+    /* tab inactivation */
+
+    for(var i=0; i<tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+        tabs[i].className = tabs[i].className.replace(" active-tab", "");
+        tablinks[i].className = tablinks[i].className.replace(" active-tab-link", "");
     }
 
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
+    /* tab activation */
 
+    document.getElementById(tabName).style.display = "block";
+    /*evt.currentTarget.className += " active";*/
+
+    evt.target.parentNode.className += " active-tab";
+    evt.currentTarget.className += " active-tab-link";
 }

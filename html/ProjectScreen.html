@@ -50,92 +50,56 @@
             </header>
         </div>
 
-        <div class="main-tabs-pane">
+        <div class="main-tabs" role="application">
 
             
                 <ul class="tabs">
-                    <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'Summary')">Summary</a></li>
-                    <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'PM')">PM</a></li>
-                    <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'DEV')">DEV</a></li>
-                    <li><a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'QA')" id="defaultTab">QA</a></li>
+                    <li class="tab">
+                        <a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'Summary')">
+                            <strong>Summary</strong>
+                        </a>
+                    </li>
+
+                    <li class="tab">
+                        <a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'PM')">
+                            <strong>PM</strong>
+                        </a>
+                    </li>
+
+                    <li class="tab">
+                        <a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'DEV')">
+                            <strong>DEV</strong>
+                        </a>
+                    </li>
+
+                    <li class="tab">
+                        <a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'QA')" id="defaultTab">
+                            <strong>QA</strong>
+                        </a>
+                    </li>
                 </ul>
 
 
 
                 <div id="Summary" class="tabcontent">
-                    <h3>Summary</h3>
+                    <strong>Summary</strong>
                     <p>Summary content</p>
                 </div>
 
                 <div id="PM" class="tabcontent">
-                    <h3>PM</h3>
+                    <strong>PM</strong>
                     <p>PM content</p>
                 </div>
 
                 <div id="DEV" class="tabcontent">
-                    <h3>DEV</h3>
+                    <strong>DEV</strong>
                     <p>DEV content</p>
                 </div>
 
                 <div id="QA" class="tabcontent">
-                    <h3>QA</h3>
+                    <strong>QA</strong>
                     <p>QA content</p>
                 </div>
-
-
-            <!-- <article class="tabs">
-
-
-
-                <section id="summary-tab">
-                    <h2><a href="#summary-tab">Summary</a></h2>
-                    <p id="summary-tab-panel">
-                        <div class="tab-content">
-                            <strong>SUMMARY TAB CONTENT</strong>
-                        </div>
-                    </p>
-                </section>
-
-                <section id="pm-tab">
-                    <h2><a href="#pm-tab">PM</a></h2>
-                    <p id="pm-tab-panel">
-                        <div class="tab-content">
-                            <strong>PM TAB CONTENT</strong>
-                        </div>
-                    </p>
-                </section>
-
-                <section id="dev-tab">
-                    <h2><a href="#dev-tab">DEV</a></h2>
-                    <p id="dev-tab-panel">
-                        <div class="tab-content">
-                            <strong>DEV TAB CONTENT</strong>
-                        </div>
-                    </p>
-                </section>
-
-                <section id="qa-tab">
-                    <h2 id="main-tabs-header"><a href="#qa-tab">QA</a></h2>
-                    <p id="qa-tab-panel">
-                        <div class="tab-content">
-
-
-
-                        </div>
-                    </p>
-                </section>
-
-                <section id="ci-tab">
-                    <h2><a href="#ci-tab">CI</a></h2>
-                    <p id="ci-tab-panel">
-                        <div class="tab-content">
-                             <strong>CI TAB CONTENT</strong>
-                        </div>
-                    </p>
-                </section>
-
-
-            </article> -->
 
         </div>
 
