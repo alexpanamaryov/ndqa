@@ -97,8 +97,57 @@
                 </div>
 
                 <div id="QA" class="tab-panel">
-                    <strong>QA</strong>
-                    <p>QA content</p>
+
+                    <div class="tab-panel-content">
+
+                        <ul class="horizontal-tabs">
+                            <li class="horizontal-tab">
+                                <a href="javascript:void(0)" class="horizontal-tablinks" onclick="openHorizontalTab(event, 'Plan')" id="defaultHorizontalTab">
+                                    Plan
+                                </a>
+                            </li>
+
+                            <li class="horizontal-tab">
+                                <a href="javascript:void(0)" class="horizontal-tablinks" onclick="openHorizontalTab(event, 'Tests')">
+                                    Tests
+                                </a>
+                            </li>
+
+                            <li class="horizontal-tab">
+                                <a href="javascript:void(0)" class="horizontal-tablinks" onclick="openHorizontalTab(event, 'Suites')">
+                                    Suites
+                                </a>
+                            </li>
+
+                            <li class="horizontal-tab">
+                                <a href="javascript:void(0)" class="horizontal-tablinks" onclick="openHorizontalTab(event, 'Builds')">
+                                    Builds
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div id="Plan" class="horizontal-tab-panel">
+                            <strong>Plan</strong>
+                            <p>Plan content</p>
+                        </div>
+
+                        <div id="Tests" class="horizontal-tab-panel">
+                            <strong>Tests</strong>
+                            <p>Tests content</p>
+                        </div>
+
+                        <div id="Suites" class="horizontal-tab-panel">
+                            <strong>Suites</strong>
+                            <p>Suites content</p>
+                        </div>
+
+                        <div id="Builds" class="horizontal-tab-panel">
+                            <strong>Builds</strong>
+                            <p>Builds content</p>
+                        </div>
+
+                    </div>
+
                 </div>
 
         </div>
@@ -116,6 +165,7 @@
 
 <script>
     document.getElementById("defaultTab").click();
+    document.getElementById("defaultHorizontalTab").click();
 </script>
 
 </body>
