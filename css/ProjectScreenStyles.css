@@ -325,12 +325,12 @@ body {
     padding: 0;
 }
 
-.test-steps-table {
+.test-steps-view-table {
     position: relative;
     display: table;
     /*width: 1200px;*/
     min-width: 1020px;
-    max-width: 1150px;
+    max-width: 1250px;
     border-collapse: collapse;
     border-spacing: 0;
     word-wrap: break-word;
@@ -338,11 +338,29 @@ body {
     font-size: small;
     vertical-align: top;
     margin: 10px 0 0 0;
-    border-color: grey;
+    /*border-color: grey;*/
 }
 
-.test-steps-table thead {
-    border-bottom: 1px solid #ccc;
+.test-steps-edit-table {
+    position: relative;
+    display: table;
+    /*width: 1200px;*/
+    min-width: 1020px;
+    max-width: 1250px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    word-wrap: break-word;
+    overflow: scroll;
+    font-size: small;
+    vertical-align: top;
+    margin: 25px 0 0 0;
+    /*border-color: #000;*/
+}
+
+.test-steps-view-table thead {
+
+    /*border-bottom: 1px solid #ccc;*/ /*!!!!!!!!*/
+
     display: table-header-group;
     vertical-align: middle;
     /*border-color: inherit;*/
@@ -351,60 +369,86 @@ body {
     font-size: small;
     margin: 0;
     padding: 0;
-    max-height: 25px;
+
+    /*max-height: 25px;*/
 }
 
-.test-steps-table tr {
+.test-steps-view-table thead tr {
     position: relative;
     display: table-row;
     vertical-align: inherit;
-    border-color: inherit;
+    /*border-color: inherit;*/
     padding: 0;
     margin: 0;
-    max-height: 25px;
+    height: 25px;
+    /*max-height: 25px;*/
 }
 
-.test-steps-table th {
+.test-steps-view-table th {
     /*width: 25%;*/
-    max-width: 250px;
-    max-height: 25px;
+    /*max-width: 250px;*/ /* !!!!!!!! */
+    /*max-height: 25px;*/
     /*padding: 0 0 10px 0;*/
     padding: 0;
     margin: 0;
 }
 
-.test-steps-table td {
+.test-steps-view-table td,
+.test-steps-edit-table td {
     vertical-align: top;
     /*width: 25%;*/
-    max-width: 250px;
-    max-height: 25px;
-    padding: 5px;
+    /*max-width: 250px;*/ /* !!!!!!!!! */
+    /*max-height: 25px;*/
+    padding: 3px;
     /*margin: 0 5px; */
-    border-top: 1px solid #ccc;
     text-align: left;
     display: table-cell;
+
+    /*border-top: 1px solid #ccc;
     border-left: 1px solid #ccc; /*TEMP*/
+
+    /*border: 1px solid #ccc;*/
+
+    /*border-color: #000;*/
 }
 
 .small-col {
     max-width: 25px;
 }
 
-.test-steps-table tbody {
+.test-steps-view-table tbody,
+.test-steps-edit-table tbody {
     display: table-row-group;
     vertical-align: middle;
     border-color: inherit;
     position: relative;
+    /*border-color: #000;*/
 }
 
-.test-steps-table tr {
+.test-steps-view-table tbody.test-steps-view tr td {
+    border: 1px solid #ccc;
+
+}
+
+.test-steps-view-table tbody.test-steps-view tr td textarea {
+    background: #ccc;
+    height: 100%;
+}
+
+.test-steps-view-table tbody.test-steps-edit {
+    /*border-color: #000;*/
+}
+
+.test-steps-view-table tr {
     height: 65px;
+    /*border-color: #000;*/
 }
 
-.test-steps-table textarea {
+.test-steps-view-table textarea,
+.test-steps-edit-table textarea {
     position: relative;
     display: inline-block;
-    width: 200px;
+    width: 220px;
     /*height: 150px;*/
     /*min-width: 150px;*/
     resize: none;
@@ -448,7 +492,16 @@ textarea.step-attachments {
     color: #fff;
 }
 
-.test-steps-table input[type="button"] {
+textarea.active {
+
+}
+
+textarea.passive {
+    background-color: #ccc;
+    border-color: #fff;
+}
+
+.test-steps-view-table input[type="button"] {
     height: 25px;
     width: 115px;
 
@@ -502,6 +555,7 @@ textarea.step-attachments {
     max-width: 200px;
     /*padding: 0 5px 0 5px;*/
     padding: 0;
+
 }
 
 .view-content p {
@@ -509,11 +563,13 @@ textarea.step-attachments {
 }
 
 .operations-column {
-    border-left: 1px solid #000;
+    /*border-left: 1px solid #000;*/
 }
 
 .view-commands {
+    position: relative;
     display: block;
+    width: 200px;
     white-space: nowrap;
     /*margin: 0 0 0 5px;*/
     margin: 0;

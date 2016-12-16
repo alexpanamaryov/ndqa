@@ -152,7 +152,7 @@
 
                             <div class="fields-group">
                                 <div class="test-steps">
-                                    <table class="test-steps-table">
+                                    <table class="test-steps-view-table">
                                         <thead>
                                             <tr>
                                                 <!--<th style="width: 1em;"></th>
@@ -164,11 +164,11 @@
                                                 <th>Data</th>
                                                 <th>Expected result</th>
                                                 <th>Comment</th>
-                                                <th>Actions</th>
+                                                <th>Attachments</th>
                                             </tr>
                                         </thead>
 
-                                        <tbody id="test-steps-content">
+                                        <tbody id="test-steps-content" class="test-steps-view">
                                             <tr>
                                                 <td class="small-col"><span class="draghandle small-col"></span></td>
                                                 <td class="small-col"><span class="step-number small-col"><p>1</p></span></td>
@@ -183,18 +183,26 @@
                                                             <span title="Edit" class="icon yellow">E</span>
                                                             <span title="Attach" class="icon green">A</span>
                                                         </div>
-                                                        <textarea placeholder="Attachments" rows="3" class="step-attachments"></textarea>
+                                                        <textarea placeholder="Attachments" rows="3" class="step-attachments passive" disabled></textarea>
                                                     </div>
                                                 </td>
                                             </tr>
 
                                             <tr>
                                                 <td class="small-col"><span class="draghandle small-col"></span></td>
-                                                <td class="small-col"><span class="step-number small-col"><p>2</p></span></td>
-                                                <td><span class="view-content"><p>Step 2 text</p></span></td>
-                                                <td><span class="view-content"><p>Data 2 text</p></span></td>
-                                                <td><span class="view-content"><p>Expected result 2 text</p></span></td>
-                                                <td><span class="view-content"><p>Comment...</p></span></td>
+                                                <td class="small-col"><span class="step-number small-col"><b>2</b></span></td>
+                                                <td>
+                                                    <textarea id="test-step-view" name="step-view" rows="3" disabled>Step 2 text</textarea>
+                                                </td>
+                                                <td>
+                                                    <textarea id="test-step-data-view" name="step-data-view" rows="3" disabled>Data 2 text</textarea>
+                                                </td>
+                                                <td>
+                                                    <textarea id="test-step-expresult-view" name="step-result-view" rows="3" disabled>Expected result 2 text</textarea>
+                                                </td>
+                                                <td>
+                                                    <textarea id="test-step-comment-view" name="step-comment-view" rows="3" disabled>Comment</textarea>
+                                                </td>
                                                 <td class="operations-column">
                                                     <div class="view-commands">
                                                         <div class="test-steps-icons">
@@ -202,16 +210,20 @@
                                                             <span title="Edit" class="icon yellow">E</span>
                                                             <span title="Attach" class="icon green">A</span>
                                                         </div>
-                                                        <textarea placeholder="Attachments" rows="3" class="step-attachments"></textarea>
+                                                        <textarea placeholder="Attachments" rows="3" class="step-attachments passive" disabled></textarea>
                                                     </div>
                                                 </td>
                                             </tr>
                                         </tbody>
+                                    </table>
 
-                                        <tbody id="test-steps-form">
+                                    <table class="test-steps-edit-table">
+                                        <tbody id="test-steps-form" class="test-steps-edit">
                                             <tr>
-                                                <td class="small-col"></td>
-                                                <td class="small-col"><span class="step-number small-col"><p>3</p></span></td>
+
+                                                <!-- <td class="small-col"></td>
+                                                <td class="small-col"><span class="step-number small-col"><p>3</p></span></td> -->
+
                                                 <td>
                                                     <textarea id="test-step" name="step" rows="5" placeholder="Step"></textarea>
                                                 </td>
@@ -224,10 +236,23 @@
                                                 <td>
                                                     <textarea id="test-step-comment" name="step-comment" placeholder="Comment" rows="5"></textarea>
                                                 </td>
-                                                <td>
+                                                
+                                                <!-- <td>
                                                     <input type="button" id="add-step-btn" value="Add step">
                                                     <input type="button" id="upload-attachment-btn" value="Upload attachment">
-                                                </td>
+                                                </td> -->
+
+                                                <!--<td>
+                                                    <div class="view-commands">
+                                                        <div class="test-steps-icons">
+                                                            <span title="Delete" class="icon red">D</span>
+                                                            <span title="Edit" class="icon yellow">E</span>
+                                                            <span title="Attach" class="icon green">A</span>
+                                                        </div>
+                                                        <textarea placeholder="Attachments" rows="3" class="step-attachments"></textarea>
+                                                    </div>
+                                                </td> -->
+
                                             </tr>
                                         </tbody>
                                     </table>
