@@ -1,0 +1,55 @@
+<script>
+
+    function openTab(evt, tabName, _tabType) {
+        "use strict";
+
+        var tabType = '';
+
+        if(_tabType == 1) {
+            tabType='aside-';
+        } else if(_tabType == 0) {
+            tabType='';
+        }
+
+        var tabPanels = document.getElementsByClassName(tabType+'tab-panel');
+
+        var tablinks = document.getElementsByClassName(tabType+'tablinks');
+
+        var tabs = document.getElementsByClassName(tabType+'tab');
+
+        var i = 0;
+
+        for (i; i < tabPanels.length; i++) {
+
+            tabPanels[i].style.display = 'none';
+
+            tabs[i].className = tabs[i].className.replace(' active-'+tabType+'tab', '');
+
+            tablinks[i].className = tablinks[i].className.replace(' active-'+tabType+'tab-link', '');
+
+        }
+
+        var asideTabs = document.getElementsByClassName('aside-tab');
+
+        for (i = 0; i < asideTabs; i++) {
+            asideTabs[i].style.display = 'none';
+        }
+
+        document.getElementById(tabName).style.display = 'block';
+        evt.currentTarget.className += ' active-'+tabType+'tab-link'
+        evt.currentTarget.parentNode.className += ' active-'+tabType+'tab';
+
+        asideTabs = document.getElementsByClassName(tabName);
+
+        for (i = 0; i < tabPanels.length; i++) {
+
+            asideTabs[i].style.display = 'block';
+
+        }
+    }
+
+    /*document.getElementById("defaultTab").click();
+
+     document.getElementById("defaultAsideTab").click();*/
+
+</script>
