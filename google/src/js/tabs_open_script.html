@@ -1,55 +1,93 @@
 <script>
 
-    function openTab(evt, tabName, _tabType) {
-        "use strict";
+    function openTabPanel(panelName) {
 
-        var tabType = '';
-
-        if(_tabType == 1) {
-            tabType='aside-';
-        } else if(_tabType == 0) {
-            tabType='';
-        }
-
-        var tabPanels = document.getElementsByClassName(tabType+'tab-panel');
-
-        var tablinks = document.getElementsByClassName(tabType+'tablinks');
-
-        var tabs = document.getElementsByClassName(tabType+'tab');
-
+        var contentPanels = document.getElementsByClassName('content-panel');
         var i = 0;
 
-        for (i; i < tabPanels.length; i++) {
+        for(i; i < contentPanels.length; i++) {
 
-            tabPanels[i].style.display = 'none';
+            if( (contentPanels[i].id != panelName) &&
+                    (contentPanels[i].className.replace('content-panel ','') != panelName)) {
 
-            tabs[i].className = tabs[i].className.replace(' active-'+tabType+'tab', '');
+                contentPanels[i].style.display = 'none';
 
-            tablinks[i].className = tablinks[i].className.replace(' active-'+tabType+'tab-link', '');
+            } else if( (contentPanels[i].id == panelName) ||
+                    (contentPanels[i].className.replace('content-panel ','') == panelName)) {
 
-        }
+                contentPanels[i].style.display = 'block';
 
-        var asideTabs = document.getElementsByClassName('aside-tab');
-
-        for (i = 0; i < asideTabs; i++) {
-            asideTabs[i].style.display = 'none';
-        }
-
-        document.getElementById(tabName).style.display = 'block';
-        evt.currentTarget.className += ' active-'+tabType+'tab-link'
-        evt.currentTarget.parentNode.className += ' active-'+tabType+'tab';
-
-        asideTabs = document.getElementsByClassName(tabName);
-
-        for (i = 0; i < tabPanels.length; i++) {
-
-            asideTabs[i].style.display = 'block';
-
+            }
         }
     }
 
-    /*document.getElementById("defaultTab").click();
+    function enableAsideTabs(evt, tabName) {
 
-     document.getElementById("defaultAsideTab").click();*/
+        "use strict";
+
+        /*console.log("Enabling aside tabs");
+
+        console.log("Clicked tab: " + tabName);*/
+
+        var headerTabs = document.getElementsByClassName('tab');
+        var tablinks = document.getElementsByClassName('tablinks');
+
+        var asideTabs = document.getElementsByClassName('aside-tab');
+        var asideTabLinks = document.getElementsByClassName('aside-tablinks');
+
+        var i = 0;
+
+        /*console.log("Aside tabs number: " + asideTabs.length);*/
+
+        for(i; i < headerTabs.length; i++) {
+
+            headerTabs[i].className = headerTabs[i].className.replace(' active-tab', '');
+
+            tablinks[i].className = tablinks[i].className.replace(' active-tab-link', '');
+
+        }
+
+        evt.currentTarget.className += ' active-tab-link';
+        evt.currentTarget.parentNode.className += ' active-tab';
+
+        for(i = 0; i < asideTabs.length; i++) {
+            asideTabs[i].style.display = 'none';
+            asideTabs[i].className = asideTabs[i].className.replace(' active-aside-tab', '');
+            asideTabLinks[i].className =
+                    asideTabLinks[i].className.replace(' active-aside-tab-link', '');
+        }
+
+        for(i = 0; i < asideTabs.length; i++) {
+
+            /*console.log("Current tab class name: " + asideTabs[i].className);*/
+
+            if((asideTabs[i].className == 'aside-tab ' + tabName)) {
+
+                asideTabs[i].style.display = 'block';
+
+            } else if((asideTabs[i].className == 'aside-tab ' + tabName + ' default')) {
+
+                asideTabs[i].style.display = 'block';
+                asideTabs[i].className += ' active-aside-tab';
+                asideTabLinks[i].className += ' active-aside-tab-link';
+
+                console.log("Panel class: " + asideTabs[i].className.replace('aside-tab ','').
+                        replace(' active-aside-tab', ''));
+
+                openTabPanel(asideTabs[i].className.replace('aside-tab ','').
+                replace(' active-aside-tab', ''));
+
+            } else {
+
+                asideTabs[i].style.display = 'none';
+
+            }
+        }
+
+    }
+
+    document.getElementById("defaultTab").click();
+
+     /*document.getElementById("defaultAsideTab").click();*/
 
 </script>
