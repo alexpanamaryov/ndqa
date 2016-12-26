@@ -2,6 +2,10 @@
 
     function addTestStep() {
 
+        var test_steps_view = document.getElementsByClassName('test-steps-view');
+
+        var currentNumberOfSteps = document.getElementsByClassName('test-step').length;
+
         /*Root element*/
         var new_test_step = document.createElement('tr');
         new_test_step.className = 'test-step';
@@ -17,6 +21,8 @@
         /*Step number column*/
         var step_number = document.createElement('span');
         step_number.className = 'step-number';
+        step_number.innerText = currentNumberOfSteps + 1;
+
         var col2 = document.createElement('td');
         col2.className = 'small-col';
         col2.appendChild(step_number);
@@ -62,7 +68,7 @@
 
         var del_step_btn = document.createElement('button');
         del_step_btn.className = 'del-step-btn';
-        //del_step_btn. = 'Delete step';
+        del_step_btn.innerText = 'Delete';
         del_step_btn.setAttribute('type','button');
         del_step_btn.setAttribute('id','del-step-btn');
         del_step_btn.setAttribute('onclick','delTestStep()');
@@ -82,8 +88,6 @@
         new_test_step.appendChild(col7);
 
 
-
-        var test_steps_view = document.getElementsByClassName('test-steps-view');
         test_steps_view[0].appendChild(new_test_step);
     }
 
