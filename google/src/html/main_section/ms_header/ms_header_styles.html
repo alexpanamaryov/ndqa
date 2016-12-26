@@ -1,48 +1,45 @@
 <style class="ms-header-styles">
 
     header.ms-header {
-
         position: relative;
         display: block;
         clear: both;
         float: left;
         width: 100%;
-        margin-left: 150px;
         padding: 0;
+        z-index: 3;
     }
 
     header.ms-header ul.tabs {
-
         position: relative;
         display: block;
+        min-width: 500px;
         float: none;
-        margin: 0;
+        margin: 10px 0 0 130px;
         padding: 0;
-
     }
 
     header.ms-header ul.tabs li.tab {
         position: relative;
-        display: inline;
+        display: inline-block;
         background: #eee;
         float: left;
         min-width: 100px;
-
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        border: 1px solid #ccc;
+        border-bottom: none;
     }
 
     header.ms-header ul.tabs li.active-tab {
         border: 1px solid #000;
         border-bottom: 1px solid #fff;
-        margin-bottom: -2px;
+        margin-bottom: -1px;
         background: #fff;
     }
 
     header.ms-header ul.tabs li.tab a.tablinks {
         display: block;
-        border-top-left-radius: 3px;
-        border-top-right-radius: 3px;
-        border: 1px solid #ccc;
-        border-bottom: none;
         padding: 4px 10px 4px 10px;
         text-decoration: none;
         color: #afafaf;

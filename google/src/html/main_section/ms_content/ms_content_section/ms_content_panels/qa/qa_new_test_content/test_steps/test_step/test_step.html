@@ -1,0 +1,122 @@
+<script type="text/javascript">
+
+    function addTestStep() {
+
+        /*Root element*/
+        var new_test_step = document.createElement('tr');
+        new_test_step.className = 'test-step';
+
+        /*Draghandle column*/
+        var draghandle = document.createElement('span');
+        draghandle.className = 'draghandle';
+        var col1 = document.createElement('td');
+        col1.className = 'small-col';
+        col1.appendChild(draghandle);
+        new_test_step.appendChild(col1);
+
+        /*Step number column*/
+        var step_number = document.createElement('span');
+        step_number.className = 'step-number';
+        var col2 = document.createElement('td');
+        col2.className = 'small-col';
+        col2.appendChild(step_number);
+        new_test_step.appendChild(col2);
+
+        /*Step number column*/
+        var step = document.createElement('textarea');
+        step.className = 'step';
+        step.setAttribute('rows','4');
+        step.setAttribute('readonly','readonly');
+        var col3 = document.createElement('td');
+        col3.appendChild(step);
+        new_test_step.appendChild(col3);
+
+        /*Step data column*/
+        var step_data = document.createElement('textarea');
+        step_data.className = 'step-data';
+        step_data.setAttribute('rows','4');
+        step_data.setAttribute('readonly','readonly');
+        var col4 = document.createElement('td');
+        col4.appendChild(step_data);
+        new_test_step.appendChild(col4);
+
+        /*Expected result column*/
+        var step_expresult = document.createElement('textarea');
+        step_expresult.className = 'step-expresult';
+        step_expresult.setAttribute('rows','4');
+        step_expresult.setAttribute('readonly','readonly');
+        var col5 = document.createElement('td');
+        col5.appendChild(step_expresult);
+        new_test_step.appendChild(col5);
+
+        /*Comment column*/
+        var step_comment = document.createElement('textarea');
+        step_comment.className = 'step-comment';
+        step_comment.setAttribute('rows','4');
+        step_comment.setAttribute('readonly','readonly');
+        var col6 = document.createElement('td');
+        col6.appendChild(step_comment);
+        new_test_step.appendChild(col6);
+
+        /*Actions column*/
+
+        var del_step_btn = document.createElement('button');
+        del_step_btn.className = 'del-step-btn';
+        //del_step_btn. = 'Delete step';
+        del_step_btn.setAttribute('type','button');
+        del_step_btn.setAttribute('id','del-step-btn');
+        del_step_btn.setAttribute('onclick','delTestStep()');
+
+        var test_steps_icons = document.createElement('div');
+        test_steps_icons.className = 'test-steps-icons';
+        test_steps_icons.appendChild(del_step_btn);
+
+        var actions_col_content = document.createElement('div');
+        actions_col_content.className = 'actions-col-content';
+        actions_col_content.appendChild(test_steps_icons);
+
+        var col7 = document.createElement('td');
+        col7.className = 'actions-column';
+        col7.appendChild(actions_col_content);
+
+        new_test_step.appendChild(col7);
+
+
+
+        var test_steps_view = document.getElementsByClassName('test-steps-view');
+        test_steps_view[0].appendChild(new_test_step);
+    }
+
+
+
+</script>
+
+<!-- tr class="test-step">
+    <td class="small-col"><span class="draghandle"></span></td>
+    <td class="small-col"><span class="step-number"><p>1</p></span></td>
+    <td>
+        <textarea class="step" rows="4" readonly></textarea>
+    </td>
+
+    <td>
+        <textarea class="step-data" rows="4" readonly></textarea>
+    </td>
+    <td>
+        <textarea class="step-expresult" rows="4" readonly></textarea>
+    </td>
+    <td>
+        <textarea class="step-comment" rows="4" readonly></textarea>
+    </td>
+    <td class="actions-column">
+        <div class="actions-col-content">
+
+                <textarea placeholder="Attachments" rows="3" class="step-attachments passive"></textarea>
+
+        <div class="test-steps-icons">
+            <button type="button" id="add-step-btn" onclick="addTestStep()">
+                Add step
+            </button>
+        </div>
+    </div>
+</td>
+</tr> -->

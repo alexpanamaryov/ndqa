@@ -3,20 +3,26 @@
     function openTabPanel(panelName) {
 
         var contentPanels = document.getElementsByClassName('content-panel');
-        var i = 0;
+        var asideTabs = document.getElementsByClassName('aside-tab');
+        var asideTabLinks = document.getElementsByClassName('aside-tablinks');
 
-        for(i; i < contentPanels.length; i++) {
+        for(var i = 0; i < contentPanels.length; i++) {
 
             if( (contentPanels[i].id != panelName) &&
                     (contentPanels[i].className.replace('content-panel ','') != panelName)) {
 
                 contentPanels[i].style.display = 'none';
+                asideTabs[i].className = asideTabs[i].className.replace(' active-aside-tab', '');
+                asideTabLinks[i].className =
+                        asideTabLinks[i].className.replace(' active-aside-tab-link', '');
 
             } else if( (contentPanels[i].id == panelName) ||
                     (contentPanels[i].className.replace('content-panel ','') == panelName)) {
 
+                asideTabs[i].style.display = 'block';
+                asideTabs[i].className += ' active-aside-tab';
+                asideTabLinks[i].className += ' active-aside-tab-link';
                 contentPanels[i].style.display = 'block';
-
             }
         }
     }
@@ -25,10 +31,6 @@
 
         "use strict";
 
-        /*console.log("Enabling aside tabs");
-
-        console.log("Clicked tab: " + tabName);*/
-
         var headerTabs = document.getElementsByClassName('tab');
         var tablinks = document.getElementsByClassName('tablinks');
 
@@ -36,8 +38,6 @@
         var asideTabLinks = document.getElementsByClassName('aside-tablinks');
 
         var i = 0;
-
-        /*console.log("Aside tabs number: " + asideTabs.length);*/
 
         for(i; i < headerTabs.length; i++) {
 
@@ -59,20 +59,11 @@
 
         for(i = 0; i < asideTabs.length; i++) {
 
-            /*console.log("Current tab class name: " + asideTabs[i].className);*/
-
             if((asideTabs[i].className == 'aside-tab ' + tabName)) {
 
                 asideTabs[i].style.display = 'block';
 
             } else if((asideTabs[i].className == 'aside-tab ' + tabName + ' default')) {
-
-                asideTabs[i].style.display = 'block';
-                asideTabs[i].className += ' active-aside-tab';
-                asideTabLinks[i].className += ' active-aside-tab-link';
-
-                console.log("Panel class: " + asideTabs[i].className.replace('aside-tab ','').
-                        replace(' active-aside-tab', ''));
 
                 openTabPanel(asideTabs[i].className.replace('aside-tab ','').
                 replace(' active-aside-tab', ''));
@@ -87,7 +78,5 @@
     }
 
     document.getElementById("defaultTab").click();
-
-     /*document.getElementById("defaultAsideTab").click();*/
 
 </script>

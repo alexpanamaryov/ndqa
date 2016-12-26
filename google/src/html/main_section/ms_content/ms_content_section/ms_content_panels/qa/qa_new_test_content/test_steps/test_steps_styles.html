@@ -1,0 +1,125 @@
+<style id="test-steps-styles">
+
+    section.test-steps {
+
+        position: relative;
+        display: block;
+        padding: 0;
+        margin: 25px 0 0 0;
+    }
+
+    section.test-steps table.test-steps-table {
+        position: relative;
+        display: table;
+        border-collapse: collapse;
+        border-spacing: 0;
+        word-wrap: break-word;
+        overflow: scroll;
+        font-size: small;
+        /*vertical-align: top;*/
+    }
+
+    section.test-steps table.test-steps-table thead {
+        position: relative;
+
+        display: table-header-group;
+        vertical-align: top;
+        border-collapse: collapse;
+        word-wrap: break-word;
+        margin: 0;
+        padding: 0;
+
+        /*border-bottom: 1px solid #ccc;*/
+    }
+
+    section.test-steps table.test-steps-table thead tr {
+        position: relative;
+        display: table-row;
+        padding: 0;
+        margin: 0;
+    }
+
+    section.test-steps table.test-steps-table thead tr th {
+
+        margin: 0;
+        position: relative;
+        padding-bottom: 5px;
+    }
+
+    section.test-steps table.test-steps-table tbody.test-steps-view {
+        position: relative;
+        display: table-row-group;
+
+    }
+
+    .small-col {
+        max-width: 25px;
+    }
+
+    .icon {
+        position: relative;
+        display: block;
+        clear: both;
+        float: left;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        cursor: pointer;
+        height: 16px;
+        width: 64px;
+        overflow: hidden;
+        padding: 0;
+        text-align: center;
+        /*vertical-align: text-top;*/
+    }
+
+    .red {
+        background: red;
+        color: yellow;
+    }
+
+    .yellow {
+        background: yellow;
+        color: black;
+    }
+
+    .green {
+        background: green;
+        color: yellow;
+    }
+
+    textarea[readonly] {
+        border: none;
+        border-left: 1px solid #eee;
+    }
+
+    textarea:focus {
+        overflow: auto;
+        min-height: 150px;
+        /*border-left: 1px solid #ff7b79;*/
+    }
+
+    .draghandle {
+        position: relative;
+        display: inline-block;
+        width: 8px;
+        height: 100%;
+        min-height: 24px;
+        cursor: move;
+        visibility: visible;
+        background: #ccc;
+    }
+
+    .step-number {
+        display: block;
+        position: relative;
+        word-wrap: break-word;
+        max-width: 25px;
+        white-space: pre-wrap;
+        margin: auto;
+        padding: 0 5px 0 5px;
+    }
+
+</style>
+
+<?!= includeFromFile('test_step_styles'); ?>
+<?!= includeFromFile('new_test_step_styles'); ?>
