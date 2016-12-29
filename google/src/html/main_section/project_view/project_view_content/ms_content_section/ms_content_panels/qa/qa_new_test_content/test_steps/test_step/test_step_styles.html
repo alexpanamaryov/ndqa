@@ -1,20 +1,23 @@
-<style id="new-test-step-styles">
+<style id="test-step-styles">
 
-    tfoot tr.new-test-step {
+    tbody tr.test-step {
         position: relative;
         display: table-row;
+        /*padding: 0;
+        margin: 0;*/
+
+        border-bottom: 1px solid #ccc;
     }
 
-    tfoot tr.new-test-step td {
+    tbody tr.test-step td {
         position: relative;
         display: table-cell;
-        vertical-align: bottom;
-        margin: 0;
-        padding: 50px 0 0 3px;
-        /*border-top: 1px solid #ccc;*/
+        /*vertical-align: top;*/
+        padding: 5px 0 10px 3px;
+        text-align: left;
     }
 
-    tfoot tr.new-test-step td textarea {
+    tbody tr.test-step td textarea {
 
         position: relative;
         display: inline-block;
@@ -37,19 +40,20 @@
 
     }
 
-    tfoot tr.new-test-step td.actions-column {
+    tbody tr.test-step td.actions-column {
 
     }
 
-    tfoot tr.new-test-step td.actions-column div.actions-col-content {
+    tbody tr.test-step td.actions-column div.actions-col-content {
         position: relative;
         display: block;
         white-space: nowrap;
         margin: 0;
         padding: 0;
+        float: right;
     }
 
-    tfoot tr.new-test-step td.actions-column div.actions-col-content textarea.step-attachments {
+    tbody tr.test-step td.actions-column div.actions-col-content textarea.step-attachments {
 
         position: relative;
         display: inline;
@@ -60,13 +64,14 @@
 
     }
 
-    tfoot tr.new-test-step td.actions-column div.actions-col-content div.test-steps-icons {
+    tbody tr.test-step td.actions-column div.actions-col-content div.test-steps-icons {
         position: relative;
         display: inline-block;
-        float: left;
+        float: right;
         width: 225px;
         margin: 0;
         padding: 3px;
+        vertical-align: top;
     }
 
 </style>

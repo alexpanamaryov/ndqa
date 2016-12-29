@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <base target="_top">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
     <?!= includeFromFile('styles'); ?>
+
+    <?!= includeFromFile('composeProjectsTableContent'); ?>
+
+    <title>Norse Digital</title>
 </head>
-<body>
+
+<body> <!--  onload="composeProjectsTableContent()" -->
     <!-- div id="page" -->
         <?!= includeFromFile('main_header'); ?>
+
         <?!= includeFromFile('main_section'); ?>
+
         <?!= includeFromFile('main_footer'); ?>
     <!-- /div -->
 </body>
-    <?!= includeFromFile('tabs_open_script'); ?>
+
+    <!-- ?!= includeFromFile('composeProjectsTableContent'); ? -->
     <?!= includeFromFile('test_step'); ?>
+
+    <?!= includeFromFile('tabs_open_script'); ?>
+
 </html>

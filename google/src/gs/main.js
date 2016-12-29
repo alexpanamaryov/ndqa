@@ -1,12 +1,12 @@
 function doGet(request) {
 
-    return HtmlService.createTemplateFromFile('index.html').evaluate(); //.setSandboxMode(HtmlService.SandboxMode.IFRAME);
+    /*var creds = Utilities.base64Encode("alp" + ':' + "voffka.com");
+    var creds2 = Utilities.base64Encode("alexey_panamaryov" + ':' + "Voffka85.com");*/
+
+    /*jiraGetProjects('1' , creds2);*/
+
+    return HtmlService.createTemplateFromFile('index.html').evaluate();
 
 }
 
-function includeFromFile(filename) {
 
-    return HtmlService.createTemplateFromFile(filename).evaluate().getContent();
-}
-
-/*TEST TEST TEST*/

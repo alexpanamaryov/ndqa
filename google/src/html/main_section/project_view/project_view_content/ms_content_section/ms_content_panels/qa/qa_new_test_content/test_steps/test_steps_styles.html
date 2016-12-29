@@ -2,7 +2,7 @@
 
     section.test-steps {
 
-        position: relative;
+        /*position: relative;*/
         display: block;
         padding: 0;
         margin: 25px 0 0 0;
@@ -17,19 +17,18 @@
         overflow: scroll;
         font-size: small;
         /*vertical-align: top;*/
+
+        width: 100%;
     }
 
     section.test-steps table.test-steps-table thead {
         position: relative;
-
         display: table-header-group;
         vertical-align: top;
         border-collapse: collapse;
         word-wrap: break-word;
         margin: 0;
         padding: 0;
-
-        /*border-bottom: 1px solid #ccc;*/
     }
 
     section.test-steps table.test-steps-table thead tr {
@@ -39,21 +38,26 @@
         margin: 0;
     }
 
-    section.test-steps table.test-steps-table thead tr th {
+    section.test-steps table.test-steps-table thead tr.col-names {
+        padding-top: 50px;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+    }
 
+    section.test-steps table.test-steps-table thead tr th {
         margin: 0;
         position: relative;
         padding-bottom: 5px;
+    }
+
+    section.test-steps table.test-steps-table thead tr.col-names th {
+        padding-top: 5px;
     }
 
     section.test-steps table.test-steps-table tbody.test-steps-view {
         position: relative;
         display: table-row-group;
 
-    }
-
-    .small-col {
-        max-width: 25px;
     }
 
     .icon {
@@ -72,30 +76,19 @@
         /*vertical-align: text-top;*/
     }
 
-    .red {
-        background: red;
-        color: yellow;
-    }
-
-    .yellow {
-        background: yellow;
-        color: black;
-    }
-
-    .green {
-        background: green;
-        color: yellow;
-    }
-
     textarea[readonly] {
         border: none;
         border-left: 1px solid #eee;
     }
 
-    textarea:focus {
+    textarea[readonly]:focus {
         overflow: auto;
         min-height: 150px;
         /*border-left: 1px solid #ff7b79;*/
+    }
+
+    .small-col {
+        width: 25px;
     }
 
     .draghandle {
@@ -117,6 +110,38 @@
         white-space: pre-wrap;
         margin: auto;
         padding: 0 5px 0 5px;
+    }
+
+    button {
+        position: relative;
+        display: block;
+        clear: both;
+        border-radius: 3px;
+        outline: none;
+        background: #fff;
+        min-width: 50px;
+        float: right;
+        /*margin-bottom: 2px;*/
+        font-size: 10px;
+    }
+
+    .clear-step-btn {
+        border: 1px solid #8c8c8c;
+        margin-bottom: 5px;
+    }
+
+    .attach-step-btn {
+        border: 1px solid #e3dd0c;
+        margin-bottom: 5px;
+    }
+
+    .add-step-btn {
+        border: 1px solid #00cb20;
+        margin-bottom: 2px;
+    }
+
+    .del-step-btn {
+        border: 1px solid #df0003;
     }
 
 </style>
