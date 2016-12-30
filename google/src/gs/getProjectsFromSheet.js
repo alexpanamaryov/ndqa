@@ -6,12 +6,12 @@ function getProjectsFromSheet(){
 
     Logger.log("Projects in sheet: " + projects.length);
 
-    var projectsJSON = '{ "projects" : [';
+    /*var projectsJSON = '{ "projects" : [';
 
     var nextProject = '';
 
     for(var i = 1; i < projects.length; i++) {
-        nextProject = '{' + '"id":' + projects[i][0] + ','  +
+        nextProject = '{' + '"id":' + projects[i][0] + ',' +
         '"jira_id":' + projects[i][1] + ','  +
         '"key":"' + projects[i][2] + '",'  +
         '"name":"' + projects[i][3] + '"}';
@@ -25,8 +25,10 @@ function getProjectsFromSheet(){
         projectsJSON = projectsJSON + nextProject;
     }
 
-    projectsJSON = projectsJSON + ']};';
+    projectsJSON = projectsJSON + ']}'; */
 
-    return JSON.parse(projectsJSON);
+    /*return JSON.parse(projectsJSON);*/
+
+    return projects;
 
 }

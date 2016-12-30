@@ -1,56 +1,56 @@
 <script type="text/javascript"> /*onload="composeProjectsTableContent()" composeProjectsTableContent()*/
 
+    var appendProjects = function(projects) {
+
+//        var $table = $(".projects-tbody");
+//
+//        var tableString = '';
+//        var trTemplate = '<tr class="{class}">{tr}</tr>';
+//        var tdTemplate = '<td class="{class}"></td>';
+//
+//        function generateTpl (tpl, data) {
+//
+//        };
+//
+//        projects.forEach(function (row) {
+//            var id = row[0];
+//            var key = row[2];
+//            var name = row[3];
+//
+//            var tdList = '';
+//            var tdName = tdTemplate.re
+//
+//
+////            row.forEach()
+//
+//        });
+
+        console.log("Projects number: " + projects.length);
+
+        for(var i = 1; i < projects.length; i++) {
+
+            var project_tr = $('<tr class="project" id=' + '"' + projects[i][0] + '"' +  '></tr>');
+
+            var project_name_td = '<td class="project_name">' +
+                    '<a href="#' + '">' + projects[i][3] + '</a>' + '</td>';
+
+            var project_key_td = '<td class="project_key">' + projects[i][2] + '</td>';
+
+            project_tr.append($(project_name_td)).append($(project_key_td));
+
+            $(".projects-tbody").append( project_tr );
+        }
+    };
 
     var composeProjectsTableContent = function() {
 
-        var projects_tr = $("<tr class='project'></tr>").append("SOME TEST TEXT");
-
-        console.log(projects_tr);
-
         if($(".projects-tbody").length) {
 
-            console.log($(".projects-tbody"));
-            $(".projects-tbody").append(projects_tr);
-
-            var projects = <?!= getProjectsFromSheet(); ?>
-
-            console.log("Projects number: " + projects.length);
-
-            for(var i = 1; i < 100; i++) {
-
-                console.log('Adding: ' + projects[i][3]);
-
-            }
+            google.script.run.withSuccessHandler(appendProjects).getProjectsFromSheet();
 
         }
-
-        /*if(projects_table) {
-
-            console.log("Loading data for: "+ projects_table[0]);
-
-            var projects = google.script.run.getProjectsFromSheet();
-
-            console.log('Projects number: ' + projects.length);
-
-            var projects_tbody = document.getElementsByClassName('projects_tbody');
-
-            var project = '';
-
-            for(var i = 0; i < projects.length; i++) {
-
-                console.log('Adding: ' + projects[i][3]);
-
-                project = document.createElement('tr');
-
-                project.innerText = projects[i][3];
-
-                projects_tbody[0].appendChild(project);
-            }
-        } else {
-            console.log("There is no projects table loaded.");
-        }*/
     };
 
-    $(document).ready(composeProjectsTableContent);
+   /* $(document).ready(composeProjectsTableContent); */
 
 </script>
