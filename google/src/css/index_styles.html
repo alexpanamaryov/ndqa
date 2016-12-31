@@ -10,8 +10,6 @@
         margin: 0;
         padding: 0;
         border: 0;
-        /*font-size: 100%;*/
-        /*font: inherit;*/
         vertical-align: baseline;
         outline: none;
         -webkit-font-smoothing: antialiased;
@@ -21,13 +19,7 @@
         box-sizing: border-box;
     }
 
-    /*html {
-        height: 100%;
-    }*/
-
     body {
-        /*background: #a4b1c2;*/
-
         background: #f5f5f5;
         color: #333;
         font-family: Tahoma, Arial, sans-serif;
@@ -45,15 +37,6 @@
         color: #111;
     }
 
-    ::-webkit-selection {
-        background: #f2c6dc;
-        color: #111;
-    }
-
-    br {
-        line-height: 1.95em;
-    }
-
     article, aside, details, figcaption, figure,
     footer, header, menu, nav, section {
         display: block;
@@ -68,7 +51,6 @@
     }
 
     blockquote:before, blockquote:after, q:before, q:after {
-        /*content: '';*/
         content: none;
     }
 
@@ -94,51 +76,36 @@
         color: #4e72ad;
     }
 
-    /* page structure */
-
     /* ============================= HEADER START ============================= */
 
-    #headwrapper {
+    #mainwrapper {
         display: block;
         width: 1350px;
         background: #f5f5f5;
-        padding: 0;
+        padding: 0 5px;
         margin: 10px auto;
     }
 
     #fixedheader {
         display: block;
         position: fixed;
-        /*top: -20px;
-        padding-top: 20px;*/
-
         top: 0;
-
         margin-top: 10px;
         height: auto;
-        width: 150px; /*1300px;*/
-        /*border-left: 1px solid #eee;
-        border-right: 1px solid #eee;*/
-        /*background: #303030;*/
+        width: 150px;
         background: #fff;
-
         z-index: 9999;
-        /*-webkit-box-shadow:  0 -3px 4px 0px #222;
-        -moz-box-shadow:  0 -3px 4px 0px #222;
-        box-shadow: 0 -3px 4px 0px #222;*/
     }
 
-    /* top header */
     #top {
         display: block;
         position: relative;
-        width: 150px; /*1300px;*/
+        width: 150px;
         padding: 0;
         margin: 0;
         top: 0;
         z-index: 9999;
-        background: #fff; /*#303030;*/
-        /*border-bottom: 3px solid #414d65;*/
+        background: #fff;
     }
 
     #logo {
@@ -146,47 +113,23 @@
         width: 150px;
         height: 45px;
         top: 0;
-        /*padding: 5px 30px;*/
-        padding-left: 10px;
-        padding-top: 5px;
-        background-color: #eee; /*#111;*/
+        padding-left: 7px;
+        padding-top: 3px;
+        background-color: #fff; /*#111;*/
         color: #000;
-
-        /*border-left: 1px solid #ccc;
-        border-right: 1px solid #ccc;*/
-
-        /*background-image: -webkit-gradient(linear, left top, left bottom, from(#303030), to(#111));
-        background-image: -webkit-linear-gradient(top, #303030, #111);
-        background-image: -moz-linear-gradient(top, #303030, #111);
-        background-image: -ms-linear-gradient(top, #303030, #111);
-        background-image: -o-linear-gradient(top, #303030, #111);
-        background-image: linear-gradient(top, #303030, #111);*/
+        border: 1px solid #000;
     }
 
-    .logo-wrapper {
-        position: relative;
-        display: block;
-        margin: 0;
-        padding: 0;
-        width: 100px;
-    }
-
-    /* navigation bar */
     #topnav {
         display: block;
-        border-top: 1px solid #eee;
-        background: #fff; /*#485c86;*/
-        /*background-image: -webkit-gradient(linear, left top, left bottom, from(#5f739d), to(#485c86));
-        background-image: -webkit-linear-gradient(top, #5f739d, #485c86);
-        background-image: -moz-linear-gradient(top, #5f739d, #485c86);
-        background-image: -ms-linear-gradient(top, #5f739d, #485c86);
-        background-image: -o-linear-gradient(top, #5f739d, #485c86);
-        background-image: linear-gradient(top, #5f739d, #485c86);*/
+        background: #fff;
+        border: 1px solid #000;
+        margin-top: 5px;
         height: 26px;
     }
 
     #topnav ul {
-        padding: 0 10px;
+        padding: 0 4px;
     }
 
     #topnav ul li {
@@ -197,10 +140,10 @@
     #topnav ul li a {
         display: block;
         float: left;
-        line-height: 25px;
-        padding: 0 7px;
-        margin-right: 6px;
-        color: #333;
+        line-height: 24px;
+        padding: 0 5px;
+        margin: 0;
+        color: #000;
         font-weight: bold;
         text-decoration: none;
         -webkit-transition: all 0.4s linear;
@@ -209,47 +152,8 @@
     }
 
     #topnav ul li a:hover {
-        /*background: rgba(255,255,255,0.2);
-        text-shadow: 1px 1px 0 rgba(0,0,0,0.2);*/
-
-        background: #ccc; /*#485c86;*/
-        color: #000; /*#d1dfeb;*/
-    }
-
-    /* ============================= HEADER END ============================= */
-
-    #pagewrapper {
-        display: block;
-        position: relative;
-        /*width: 1145px;*/
-        /*background: #ff0400;*/
-        padding: 0;
-        /*margin: 0 auto;*/
-        /*margin-top: 85px;*/
-
-        margin-left: 155px;
-
-
-
-        /*-webkit-box-shadow:  0 3px 7px -1px #222;
-         -moz-box-shadow:  0 3px 7px -1px #222;
-         box-shadow: 0 3px 7px -1px #222;*/
-    }
-
-    #content {
-        display: block;
-        background: #fff; /*#ff0400;*/
-        min-height: 750px;
-
-        border: 1px solid #eee;
-
-        /*padding: 17px 25px;*/
-    }
-
-    .clearbox {
-        display: block;
-        clear: both;
-        padding: 65px 0;
+        background: #ccc;
+        color: #000;
     }
 
     /* ============================= LEFT ASIDE START ============================= */
@@ -260,27 +164,16 @@
         width: 150px;
         background: #f5f5f5;
         padding: 0;
-        margin: 0; /*auto;*/
+        margin: 0;
     }
 
     #fixed-left-aside {
         display: block;
         position: relative;
-        /*top: 130px;*/
-        /*padding-top: 35px;*/
         margin: 0;
-
-        /*margin-top: 20px;*/
-        /*float: left;*/
-        /*left: 0;*/
-        /*height: auto;*/
         width: 150px;
-        /*background: #303030;*/
         background: #f5f5f5;
         z-index: 9995;
-        /*-webkit-box-shadow:  0 -3px 4px 0px #222;
-        -moz-box-shadow:  0 -3px 4px 0px #222;
-        box-shadow: 0 -3px 4px 0px #222;*/
     }
 
     #left {
@@ -288,14 +181,10 @@
         position: relative;
         width: 150px;
         padding: 0;
-        /*margin: 0;*/
-
-        margin-top: 85px;
+        margin-top: 5px;
         top: 0;
         z-index: 9995;
-        /*background: #303030;*/
         background: #f5f5f5;
-        /*border-bottom: 3px solid #414d65;*/
     }
 
     #avatar {
@@ -303,44 +192,20 @@
         width: 100%;
         height: 150px;
         top: 0;
-        padding: 0; /*12px;*/
-        background-color: #fff; /*#111;*/
-
-        border: 1px solid #eee;
-
-        /*background-image: -webkit-gradient(linear, left top, left bottom, from(#303030), to(#f5f5f5));
-        background-image: -webkit-linear-gradient(top, #303030, #f5f5f5);
-        background-image: -moz-linear-gradient(top, #303030, #f5f5f5);
-        background-image: -ms-linear-gradient(top, #303030, #f5f5f5);
-        background-image: -o-linear-gradient(top, #303030, #f5f5f5);
-        background-image: linear-gradient(top, #303030, #f5f5f5);*/
+        padding: 0;
+        background-color: #fff;
+        border: 1px solid #000;
     }
 
-    /* navigation bar */
     #user-nav {
         position: relative;
         display: block;
-
-        /*background: #485c86;*/
-
-        /*background-image: -webkit-gradient(linear, left top, left bottom, from(#5f739d), to(#485c86));
-        background-image: -webkit-linear-gradient(top, #5f739d, #485c86);
-        background-image: -moz-linear-gradient(top, #5f739d, #485c86);
-        background-image: -ms-linear-gradient(top, #5f739d, #485c86);
-        background-image: -o-linear-gradient(top, #5f739d, #485c86);
-        background-image: linear-gradient(top, #5f739d, #485c86);*/
-
-        /*height: 32px;*/
-
-        /*margin-top: 10px;*/
-        /*height: 100%;*/
-        /*border: 1px solid #000;*/
     }
 
     #user-nav ul {
         position: relative;
         display: block;
-        padding: 0; /* 10px;*/
+        padding: 0;
     }
 
     #user-nav ul li {
@@ -349,9 +214,8 @@
         float: left;
         clear: both;
         font-size: 1.2em;
-        background: #f5f5f5; /*#485c86;*/
+        background: #f5f5f5;
         width: 100%;
-
     }
 
     #user-nav ul li a {
@@ -363,7 +227,7 @@
         line-height: 31px;
         padding: 0 7px;
         margin-right: 6px;
-        color: #333; /*#d1dfeb;*/
+        color: #333;
         font-weight: bold;
         text-decoration: none;
         -webkit-transition: all 0.4s linear;
@@ -372,15 +236,11 @@
     }
 
     #user-nav ul li a:hover {
-        /*background: rgba(255,255,255,0.2);
-        text-shadow: 1px 1px 0 rgba(0,0,0,0.2);*/
-
-
-        background: #ccc; /*#485c86;*/
-        color: #000; /*#d1dfeb;*/
+        background: #ccc;
+        color: #000;
     }
 
-    /* ============================= LEFT ASIDE END ============================= */
+    /* ============================= COMMON STYLES START ============================= */
 
     #toparrow {
         display: none;
@@ -390,47 +250,29 @@
         bottom: 45px;
         right: 45px;
         cursor: pointer;
-        /*background: url('http://media02.hongkiat.com/smart-header-footers-jquery/scrolltop-arrow.png') 0 0 no-repeat;*/
         z-index: 9999;
     }
 
-    /* ============================= FOOTER START ============================= */
-
-    /* footer area */
-    #fixedfooter {
+    #pagewrapper {
         display: block;
         position: relative;
-        width: 1200px;
-        margin: 0 auto;
+        padding: 0;
+        margin-left: 155px;
     }
 
-    #fixedfooter ul {
-        position: absolute;
-        bottom: 0;
-        display: none;
-        height: 60px;
-        width: 1200px;
-        padding: 0 15px;
-        background: #c4cfde;
-    }
-
-    #fixedfooter ul li {
-        display: inline;
-        margin-right: 8px;
-    }
-
-    #fixedfooter ul li a {
+    #content {
         display: block;
-        float: right;
-        line-height: 50px;
-        font-weight: bold;
-        text-decoration: none;
-        font-size: 1.2em;
-        padding: 0 5px;
-        margin-right: 2px;
-        text-shadow: 1px 1px 0 #eee;
+        background: #fff;
+        min-height: 750px;
+        border: 1px solid #000;
+        padding: 3px;
     }
 
-    /* ============================= FOOTER END ============================= */
+    .clearbox {
+        display: block;
+        clear: both;
+        padding: 65px 0;
+    }
+
 
 </style>
