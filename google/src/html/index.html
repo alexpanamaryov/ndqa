@@ -1,33 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <base target="_top">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-    <?!= includeFromFile('tabs_open_script'); ?>
-
-    <?!= includeFromFile('styles'); ?>
-
-    <?!= includeFromFile('composeProjectsTableContent'); ?>
-
     <title>Norse Digital</title>
+    <meta name="author" content="Alexey Panamaryov">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <?!= includeFromFile('index_styles'); ?>
+
+    <?!= includeFromFile('hideHeader'); ?>
+
+    <?!= includeFromFile('onDocumentReady'); ?>
 </head>
+<body>
 
-<body> <!--  onload="composeProjectsTableContent()" -->
-    <!-- div id="page" -->
-        <?!= includeFromFile('main_header'); ?>
+<div id="headwrapper">
+    <div id="fixedheader">
+        <header id="top">
+            <div id="logo">
+                <!-- Logo Source: http://www.psdgraphics.com/psd/psd-power-button/ -->
+                <div id="logo-wrapper">
+                    <h1>Norse Digital</h1>
+                    <h2>Open Reliable</h2>
+                </div>
+                <!-- ul id="rightlinks">
+                    <li><a href="javascript:void(0)">Register</a></li>
+                    <li><a href="javascript:void(0)">Login</a></li>
+                    <li><a href="javascript:void(0)">FAQ/Wiki</a></li>
+                    <li><a href="javascript:void(0)">Support</a></li>
+                </ul -->
+            </div>
 
-        <?!= includeFromFile('main_section'); ?>
+            <nav id="topnav">
+                <ul>
+                    <li><a href="javascript:void(0)">QA</a></li>
+                    <li><a href="javascript:void(0)">HR</a></li>
+                    <li><a href="javascript:void(0)">PM</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div> <!-- /end #fixedheader -->
 
-        <?!= includeFromFile('main_footer'); ?>
-    <!-- /div -->
+    <div id="left-aside-wrapper">
+        <div id="fixed-left-aside">
+            <aside id="left">
+                <div id="avatar">
+                    <h1>Avatar</h1>
+                </div>
+
+                <nav id="user-nav">
+                    <ul>
+                        <li><a href="javascript:void(0)">News</a></li>
+                        <li><a href="javascript:void(0)">People</a></li>
+                        <li><a href="javascript:void(0)">Projects</a></li>
+                        <li><a href="javascript:void(0)">Time sheet</a></li>
+                        <li><a href="javascript:void(0)">Services</a></li>
+                        <li><a href="javascript:void(0)">Food</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </div>
+    </div>
+
+    <div id="pagewrapper">
+        <!--div id="toparrow"></div-->
+        <div id="content">
+            <h1>CONTENT</h1>
+        </div>
+    </div>
+
+</div> <!-- /end #headwrapper -->
+
+
+
+
+
+
+
+<!--div class="clearbox">&nbsp;</div-->
+
+<footer id="fixedfooter">
+    <ul>
+        <li><a href="javascript:void(0)">Get In Touch</a></li>
+    </ul>
+</footer>
+
 </body>
-
-    <!-- ?!= includeFromFile('composeProjectsTableContent'); ? -->
-    <?!= includeFromFile('test_step'); ?>
-
-
-
 </html>
