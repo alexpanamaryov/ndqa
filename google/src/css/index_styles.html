@@ -21,20 +21,10 @@
 
     body {
         background: #f5f5f5;
-        color: #333;
+        color: #393939;
         font-family: Tahoma, Arial, sans-serif;
         font-size: 62.5%;
         line-height: 1;
-    }
-
-    ::selection {
-        background: #f2c6dc;
-        color: #111;
-    }
-
-    ::-moz-selection {
-        background: #f2c6dc;
-        color: #111;
     }
 
     article, aside, details, figcaption, figure,
@@ -69,11 +59,11 @@
     }
 
     a {
-        color: #7091c7;
+        color: #393939;
     }
 
     a:hover {
-        color: #4e72ad;
+        color: #393939;
     }
 
     /* ============================= HEADER START ============================= */
@@ -115,46 +105,117 @@
         top: 0;
         padding-left: 7px;
         padding-top: 3px;
-        background-color: #fff; /*#111;*/
-        color: #000;
-        border: 1px solid #000;
+        background: #fff; /*#111;*/
+        color: #393939;
+        border: 1px solid #9f9f9f;
     }
 
-    #topnav {
+    #topmenu {
         display: block;
         background: #fff;
-        border: 1px solid #000;
+        border: 1px solid #9f9f9f;
         margin-top: 5px;
-        height: 26px;
+        /*padding: 3px 0 0 5px;*/
+        padding: 0;
+        height: 30px;
+
+        color: #393939;
+        font-weight: bold;
     }
 
-    #topnav ul {
-        padding: 0 4px;
+    /* ------------- JQuery UI top menu start -------------- */
+
+    .ui-menu {
+        overflow: hidden;
+        padding: 7px;
+        color: #393939;
+        font-weight: bold;
+
     }
 
-    #topnav ul li {
-        display: inline;
-        font-size: 1.2em;
+    .ui-menu .ui-menu {
+        overflow: hidden;
+        padding: 5px;
+        color: #393939;
+        font-weight: bold;
     }
 
-    #topnav ul li a {
-        display: block;
+    .ui-menu li {
         float: left;
-        line-height: 24px;
-        padding: 0 5px;
-        margin: 0;
-        color: #000;
+        display: block;
+        color: #393939;
         font-weight: bold;
         text-decoration: none;
-        -webkit-transition: all 0.4s linear;
-        -moz-transition: all 0.4s linear;
-        transition: all 0.4s linear;
+        height: 30px;
     }
 
-    #topnav ul li a:hover {
-        background: #ccc;
-        color: #000;
+    .ui-menu li div {
+        display:block;
+        float:left;
+        color: #393939;
+        font-weight: bold;
+        text-decoration: none;
+        height: 30px;
     }
+
+    .ui-menu li div.ui-state-active {
+        display:block;
+        float:left;
+        color: #393939;
+        font-weight: bold;
+        text-decoration: none;
+        height: 30px;
+    }
+
+    .ui-menu li div:hover {
+        background: #ccc;
+        display:block;
+        float:left;
+        color: #393939;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+
+    .ui-menu li ul {
+        display: block;
+        clear: both;
+        width: 100px !important;
+        color: #393939;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .ui-menu li ul li {
+        display:block;
+        clear: both;
+        width: 100% !important;
+        color: #393939;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .ui-menu li ul li div {
+        display:block;
+        float:left;
+        width: 100% !important;
+        color: #393939;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .ui-menu li ul li div:hover {
+        background: #ccc;
+        display:block;
+        float:left;
+        width: 100% !important;
+        color: #393939;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    /* ------------- JQuery UI top menu end -------------- */
+
 
     /* ============================= LEFT ASIDE START ============================= */
 
@@ -193,51 +254,45 @@
         height: 150px;
         top: 0;
         padding: 0;
-        background-color: #fff;
-        border: 1px solid #000;
+        background: #fff;
+        border: 1px solid #9f9f9f;
     }
 
     #user-nav {
         position: relative;
         display: block;
-    }
-
-    #user-nav ul {
-        position: relative;
-        display: block;
         padding: 0;
+        background: #fff;
+        border: 1px solid #9f9f9f;
+        margin-top: 5px;
+        height: 182px;
     }
 
-    #user-nav ul li {
+    #user-nav li {
         position: relative;
         display: block;
         float: left;
         clear: both;
         font-size: 1.2em;
-        background: #f5f5f5;
+        background: #fff;
         width: 100%;
     }
 
-    #user-nav ul li a {
-        position: relative;
-        display: block;
+    #user-nav li a {
         float: left;
         width: 100%;
         text-align: right;
-        line-height: 31px;
+        line-height: 30px;
         padding: 0 7px;
         margin-right: 6px;
-        color: #333;
+        color: #393939;
         font-weight: bold;
         text-decoration: none;
-        -webkit-transition: all 0.4s linear;
-        -moz-transition: all 0.4s linear;
-        transition: all 0.4s linear;
     }
 
-    #user-nav ul li a:hover {
+    #user-nav li a:hover {
         background: #ccc;
-        color: #000;
+        color: #393939;
     }
 
     /* ============================= COMMON STYLES START ============================= */
@@ -264,7 +319,7 @@
         display: block;
         background: #fff;
         min-height: 750px;
-        border: 1px solid #000;
+        border: 1px solid #9f9f9f;
         padding: 3px;
     }
 

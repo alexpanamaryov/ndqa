@@ -1,3 +1,3 @@
 function buildBasicUI() {
-    return HtmlService.createTemplateFromFile('index.html').evaluate();
+    return HtmlService.createTemplateFromFile('index.html').evaluate().setTitle("Norse Digital");
 }

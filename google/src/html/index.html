@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <title>Norse Digital</title>
     <meta name="author" content="Alexey Panamaryov">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 
     <?!= includeFromFile('index_styles'); ?>
 
-    <?!= includeFromFile('hideHeader'); ?>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
-    <?!= includeFromFile('onDocumentReady'); ?>
 </head>
 <body>
 
@@ -24,13 +24,37 @@
                     <h3>Open Reliable</h3>
             </div>
 
-            <nav id="topnav">
-                <ul>
-                    <li><a href="javascript:void(0)">QA</a></li>
-                    <li><a href="javascript:void(0)">HR</a></li>
-                    <li><a href="javascript:void(0)">PM</a></li>
+            <!--nav id="topnav" <a href="javascript:void(0)">-->
+
+                <ul id="topmenu">
+                    <li id="qa-menu"><div>QA</div>
+
+                        <ul>
+                            <li><div>New Test</div></li>
+                            <li><div>Tests</div></li>
+                        </ul>
+                    </li>
+
+                    <li id="hr-menu"><div>HR</div>
+
+                        <ul>
+                            <li><div>People</div></li>
+                            <li><div>Food</div></li>
+                            <li><div>News</div></li>
+                        </ul>
+                    </li>
+
+                    <li id="pm-menu"><div>PM</div>
+
+                        <ul>
+                            <li><div>Projects</div></li>
+                            <li><div>Planning</div></li>
+                        </ul>
+                    </li>
                 </ul>
-            </nav>
+
+            <!--/nav-->
+
         </header>
 
 
@@ -41,8 +65,8 @@
                         <h1>Avatar</h1>
                     </div>
 
-                    <nav id="user-nav">
-                        <ul>
+                    <!--nav id="user-nav"-->
+                        <ul id="user-nav">
                             <li><a href="javascript:void(0)">News</a></li>
                             <li><a href="javascript:void(0)">People</a></li>
                             <li><a href="javascript:void(0)">Services</a></li>
@@ -50,7 +74,7 @@
                             <li><a href="javascript:void(0)">My Projects</a></li>
                             <li><a href="javascript:void(0)">My Time Sheet</a></li>
                         </ul>
-                    </nav>
+                    <!--/nav-->
                 </aside>
             </div>
         </div>
@@ -65,5 +89,6 @@
 
 </div> <!-- /end #headwrapper -->
 
+        <?!= includeFromFile('createTopMenu'); ?>
 </body>
 </html>
