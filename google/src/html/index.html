@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 
     <?!= includeFromFile('index_styles'); ?>
+    <?!= includeFromFile('people_view_styles'); ?>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script-->
@@ -30,25 +31,25 @@
                     <li id="qa-menu"><div>QA</div>
 
                         <ul>
-                            <li><div>New Test</div></li>
-                            <li><div>Tests</div></li>
+                            <li><div><a href="javascript:void(0)">New Test</a></div></li>
+                            <li><div><a href="javascript:void(0)">Tests</a></div></li>
                         </ul>
                     </li>
 
                     <li id="hr-menu"><div>HR</div>
 
                         <ul>
-                            <li><div>People</div></li>
-                            <li><div>Food</div></li>
-                            <li><div>News</div></li>
+                            <li><div><a href="javascript:void(0)" onclick="createPeopleView()">People</a></div></li>
+                            <li><div><a href="javascript:void(0)">Food</a></div></li>
+                            <li><div><a href="javascript:void(0)">News</a></div></li>
                         </ul>
                     </li>
 
                     <li id="pm-menu"><div>PM</div>
 
                         <ul>
-                            <li><div>Projects</div></li>
-                            <li><div>Planning</div></li>
+                            <li><div><a href="javascript:void(0)">Projects</a></div></li>
+                            <li><div><a href="javascript:void(0)">Planning</a></div></li>
                         </ul>
                     </li>
                 </ul>
@@ -83,12 +84,14 @@
 
     <div id="pagewrapper">
         <div id="content">
-
+            <!--div id="loading-indicator"></div-->
         </div>
     </div>
 
 </div> <!-- /end #headwrapper -->
 
         <?!= includeFromFile('createTopMenu'); ?>
+
+        <?!= includeFromFile('buildPeopleView'); ?>
 </body>
 </html>

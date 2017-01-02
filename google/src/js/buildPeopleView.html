@@ -1,0 +1,83 @@
+<script type="text/javascript" id="createPeopleView">
+
+    function addPeople(people) {
+
+        console.log("Getting list of active people...");
+
+        console.log("Number of active persons: " + people.activePeople.length);
+
+
+        var peopleViewContent = $('#people-view-content');
+
+        $.each(people.activePeople, function(personIndex, personData){
+
+            console.log("===============" + personData.id);
+            console.log(personData.avatar);
+            console.log(personData.name);
+            console.log(personData.location);
+            console.log(personData.company);
+            console.log(personData.position);
+            console.log(personData.email);
+
+            peopleViewContent.append(
+                    $('<tr/>',{
+                        class:'person-view',
+                        id:'person'+ personData.id
+                    }).append(
+                            $('<td/>',{
+                                class:'person-avatar',
+                                text:personData.avatar}),
+
+                            $('<td/>',{class:'person-info'}).append(
+                                    $('<tr/>',{
+                                        class:'person-name',
+                                        text:personData.name}),
+
+                                    $('<tr/>',{class:'person-general-info'}).append(
+                                            $('<td/>',{
+                                                class:'person-location',
+                                                text:personData.location}),
+
+                                            $('<td/>',{
+                                                class:'person-company',
+                                                text:personData.company}),
+
+                                            $('<td/>',{
+                                                class:'person-position',
+                                                text:personData.position}),
+
+                                            $('<td/>',{
+                                                class:'person-email',
+                                                text:personData.email})
+                                    )
+                            )
+                    )
+            );
+        });
+
+        console.log("People View is ready.");
+        $("#loading-indicator").remove();
+    }
+
+
+    function buildPeopleView () {
+        console.log("Building People View...");
+
+        var peopleView =
+                $('<table/>',{id:'people-view'})
+                        .append(
+                            $('<thead/>',{id:'people-view-controls'}),
+                            $('<tbody/>',{id:'people-view-content'}).append(
+                                $('<tr/>',{id:'loading-indicator',text:'Loading People list...'}))
+                        ).appendTo('#content');
+
+
+        google.script.run.withSuccessHandler(addPeople).getPeopleListFromSheet('active');
+
+    }
+
+   $(document).ready(buildPeopleView());
+
+</script>
+
+
