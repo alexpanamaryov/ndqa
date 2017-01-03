@@ -1,0 +1,74 @@
+<script type="text/javascript" id="buildNewTestStepForm">
+
+    function buildNewTestStepForm() {
+
+        console.log("Adding 'New Test Step' Form...");
+
+        $('<form/>',{id:'nts-form'}).append(
+
+                $('<tr/>',{id:'nts-form-content'}).append(
+
+                        $('<td/>',{class:'small-col'}).append(
+
+                                $('<span/>',{class:'small-col'})),
+
+                        $('<td/>',{class:'small-col'}).append(
+
+                                $('<span/>',{class:' step-number small-col'})),
+
+                        $('<td/>').append(
+
+                                $('<textarea/>',{
+                                    id:'nts-input',
+                                    rows:'4',
+                                    placeholder:'Step'})),
+
+                        $('<td/>').append(
+
+                                $('<textarea/>',{
+                                    id:'nts-data-input',
+                                    rows:'4',
+                                    placeholder:'Data'})),
+
+                        $('<td/>').append(
+
+                                $('<textarea/>',{
+                                    id:'nts-expresult-input',
+                                    rows:'4',
+                                    placeholder:'Expected result'})),
+
+                        $('<td/>').append(
+
+                                $('<textarea/>',{
+                                    id:'nts-comment-input',
+                                    rows:'4',
+                                    placeholder:'Comment'})),
+
+                        $('<td/>',{id:'nts-actions-column'}).append(
+
+                                $('<div/>',{id:'nts-actions-col-content'}).append(
+
+                                        $('<button>',{
+                                            id:'nts-clear-btn',
+                                            type:'button',
+                                            text:'Clear'}),
+
+                                        $('<button>',{
+                                            id:'nts-attach-btn',
+                                            type:'button',
+                                            text:'Attach'}),
+
+                                        $('<button>',{
+                                            id:'nts-add-btn',
+                                            type:'button',
+                                            text:'Add'})
+
+                                )
+                        )
+                )
+
+        ).appendTo('#ntt-tbody');
+
+    }
+
+</script>

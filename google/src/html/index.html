@@ -9,6 +9,11 @@
 
     <?!= includeFromFile('index_styles'); ?>
     <?!= includeFromFile('people_view_styles'); ?>
+    <?!= includeFromFile('new_test_view_styles'); ?>
+    <?!= includeFromFile('new_test_form_styles'); ?>
+    <?!= includeFromFile('test_steps_form_styles'); ?>
+    <?!= includeFromFile('new_test_step_form_styles'); ?>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script-->
@@ -19,13 +24,13 @@
 
 <div id="mainwrapper">
     <div id="fixedheader">
+
         <header id="top">
+
             <div id="logo">
                     <h1>Norse Digital</h1>
                     <h3>Open Reliable</h3>
             </div>
-
-            <!--nav id="topnav" <a href="javascript:void(0)">-->
 
                 <ul id="topmenu">
                     <li id="qa-menu"><div>QA</div>
@@ -54,28 +59,25 @@
                     </li>
                 </ul>
 
-            <!--/nav-->
-
         </header>
-
 
         <div id="left-aside-wrapper">
             <div id="fixed-left-aside">
                 <aside id="left">
+
                     <div id="avatar">
                         <h1>Avatar</h1>
                     </div>
 
-                    <!--nav id="user-nav"-->
-                        <ul id="user-nav">
-                            <li><a href="javascript:void(0)">News</a></li>
-                            <li><a href="javascript:void(0)">People</a></li>
-                            <li><a href="javascript:void(0)">Services</a></li>
-                            <li><a href="javascript:void(0)">My Food</a></li>
-                            <li><a href="javascript:void(0)">My Projects</a></li>
-                            <li><a href="javascript:void(0)">My Time Sheet</a></li>
-                        </ul>
-                    <!--/nav-->
+                    <ul id="user-nav">
+                        <li><a href="javascript:void(0)">News</a></li>
+                        <li><a href="javascript:void(0)">People</a></li>
+                        <li><a href="javascript:void(0)">Services</a></li>
+                        <li><a href="javascript:void(0)">My Food</a></li>
+                        <li><a href="javascript:void(0)">My Projects</a></li>
+                        <li><a href="javascript:void(0)">My Time Sheet</a></li>
+                    </ul>
+
                 </aside>
             </div>
         </div>
@@ -84,7 +86,7 @@
 
     <div id="pagewrapper">
         <div id="content">
-            <!--div id="loading-indicator"></div-->
+
         </div>
     </div>
 
@@ -93,5 +95,33 @@
         <?!= includeFromFile('createTopMenu'); ?>
 
         <?!= includeFromFile('buildPeopleView'); ?>
+
+<!-- ------------------------------ -->
+
+        <?!= includeFromFile('buildNewTestForm'); ?>
+
+        <?!= includeFromFile('buildTestStepsForm'); ?>
+
+        <?!= includeFromFile('buildNewTestStepForm'); ?>
+
+        <?!= includeFromFile('buildNewTestView'); ?>
+
+
+        <script type="text/javascript" id="actions-on-document-ready">
+
+/*            $(document).ready(
+
+                    console.log("Executing actions after document become ready..."),
+
+                    buildNewTestView(),
+                    buildNewTestForm(),
+                    buildNewTestStepForm()
+                 /* buildTestStepsForm()*/
+            );*/
+
+        </script>
+
+
+
 </body>
 </html>

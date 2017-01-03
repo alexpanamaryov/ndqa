@@ -1,0 +1,182 @@
+<style type="text/css" id="new-test-styles">
+
+    #new-test-view {
+
+        position: relative;
+        display: block;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    #nt-table {
+        position: relative;
+        display: table;
+
+        word-wrap: break-word;
+        overflow: hidden;
+        font-size: small;
+
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    #ntt-thead {
+
+        display: table-header-group;
+
+    }
+
+    #ntt-tfoot {
+
+        display: table-footer-group;
+
+    }
+
+    #ntt-tbody {
+
+        display: table-row-group;
+
+    }
+
+    /* ----------------- COMMON ----------------- */
+
+    .icon {
+        position: relative;
+        display: block;
+        clear: both;
+        float: left;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        cursor: pointer;
+        height: 16px;
+        width: 64px;
+        overflow: hidden;
+        padding: 0;
+        text-align: center;
+    }
+
+    .small-col {
+        width: 25px;
+    }
+
+    .step-number {
+        display: block;
+        position: relative;
+        word-wrap: break-word;
+        max-width: 25px;
+        white-space: pre-wrap;
+        margin: auto;
+        padding: 0 5px 0 5px;
+    }
+
+    button {
+        position: relative;
+        display: block;
+        clear: both;
+        border-radius: 3px;
+        outline: none;
+        background: #fff;
+        min-width: 50px;
+        max-height: 19px;
+        float: right;
+        font-size: 10px;
+    }
+
+
+
+    /* ----------------- COMMON END ----------------- */
+
+    #new-test-step-content td {
+        position: relative;
+        display: table-cell;
+        vertical-align: bottom;
+        margin: 0;
+        padding: 0;
+        /*padding: 0 0 25px 3px;*/
+        /*border-top: 1px solid #ccc;*/
+    }
+
+    #new-test-step-content td textarea {
+
+        position: relative;
+        display: inline-block;
+        width: 200px;
+
+        box-sizing: border-box;
+        overflow: hidden;
+
+        margin: 0;
+        padding: 3px;
+
+        resize: vertical;
+        background-color: white;
+        outline: none;
+        user-select: text;
+        color: initial;
+        text-transform: none;
+        text-indent: 2px;
+        text-align: left;
+
+    }
+
+    /*.actions-col-content {
+        position: relative;
+        display: block;
+        white-space: nowrap;
+        margin: 0;
+        padding-left: 25px;
+        float: right;
+    }*/
+
+    .step-attachments {
+
+        position: relative;
+        display: inline;
+        float: left;
+        min-height: 48px;
+        max-width: 165px;
+        resize: none;
+
+    }
+
+    .test-steps-icons {
+        position: relative;
+        display: inline-block;
+        float: right;
+        /*width: 200px;*/
+        margin: 0;
+        padding: 3px;
+    }
+
+
+
+    textarea[readonly] {
+        border: none;
+        border-left: 1px solid #eee;
+    }
+
+    textarea[readonly]:focus {
+        overflow: auto;
+        min-height: 150px;
+    }
+
+
+
+    .draghandle {
+        position: relative;
+        display: inline-block;
+        width: 8px;
+        height: 100%;
+        min-height: 24px;
+        cursor: move;
+        visibility: visible;
+        background: #ccc;
+    }
+
+
+    .del-step-btn {
+        border: 1px solid #df0003;
+        font-weight: bold;
+    }
+</style>

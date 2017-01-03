@@ -1,0 +1,107 @@
+<script type="text/javascript" id="buildNewTestForm">
+
+    function buildNewTestForm() {
+
+        console.log("Adding 'New Test' Form...");
+
+        $('<form/>',{id:'nt-form'}).append(
+
+                $('<tr/>',{id:'nt-form-content'}).append(
+
+                        $('<td/>').append(
+
+                                $('<tr/>').append(
+                                        $('<select/>',{
+                                            id:'nt-project-selector'/*,
+                                            value:'Select Project'*/
+                                        })
+                                ),
+
+                                $('<tr/>').append(
+                                        $('<select/>',{
+                                            id:'nt-nt-test-area-selector'/*,
+                                            value:'Select Test Area'*/
+                                        })
+                                ),
+
+                                $('<tr/>').append(
+                                        $('<input/>',{
+                                            type:'text',id:'nt-summary-input'
+                                        })
+                                ),
+
+                                $('<tr/>').append(
+                                        $('<textarea/>',{
+                                            id:'nt-description-input'
+                                        })
+                                )
+
+                        ),
+
+                        $('<td/>').append(
+
+                                $('<tr/>').append(
+                                        $('<input/>',{
+                                            type:'text',
+                                            id:'nt-test-duration-input'
+                                        })
+                                ),
+
+                                $('<tr/>').append(
+
+                                        $('<textarea/>',{
+                                            id:'nt-assigned-issues-input'
+                                        })
+
+                                ),
+
+                                $('<tr/>').append(
+
+                                        $('<label/>',{
+                                            for:'nt-sync-with-jira',
+                                            text:'Sync with Jira'}),
+
+                                        $('<input/>',{
+                                            type:'check',
+                                            id:'nt-sync-with-jira'})
+
+                                )
+                        ),
+
+                        $('<td/>').append(
+
+                                $('<tr/>').append(
+
+                                        $('<button>',{
+                                            id:'nt-save-button',
+                                            type:'button',
+                                            text:'Create test'})
+
+                                ),
+
+                                $('<tr/>').append(
+
+                                        $('<button>',{
+                                            id:'nt-clear-button',
+                                            type:'button',
+                                            text:'Clear'})
+
+                                ),
+
+                                $('<tr/>').append(
+
+                                        $('<button>',{
+                                            id:'nt-add-steps-button',
+                                            type:'button',
+                                            text:'Add steps'})
+
+                                )
+
+                        )
+
+                )
+
+        ).appendTo('#ntt-thead');
+    }
+
+</script>

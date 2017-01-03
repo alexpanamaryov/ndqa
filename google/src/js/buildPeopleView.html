@@ -1,4 +1,4 @@
-<script type="text/javascript" id="createPeopleView">
+<script type="text/javascript" id="buildPeopleView">
 
     function addPeople(people) {
 
@@ -22,8 +22,7 @@
             peopleViewContent.append(
                     $('<tr/>',{
                         class:'person-view',
-                        id:'person'+ personData.id
-                    }).append(
+                        id:'person'+ personData.id}).append(
                             $('<td/>',{
                                 class:'person-avatar',
                                 text:personData.avatar}),
@@ -36,19 +35,19 @@
                                     $('<tr/>',{class:'person-general-info'}).append(
                                             $('<td/>',{
                                                 class:'person-location',
-                                                text:personData.location}),
+                                                text:'Location: ' + personData.location}),
 
                                             $('<td/>',{
                                                 class:'person-company',
-                                                text:personData.company}),
+                                                text:'Company: ' + personData.company}),
 
                                             $('<td/>',{
                                                 class:'person-position',
-                                                text:personData.position}),
+                                                text:'Position: ' + personData.position}),
 
                                             $('<td/>',{
                                                 class:'person-email',
-                                                text:personData.email})
+                                                text:'E-Mail: ' + personData.email})
                                     )
                             )
                     )
@@ -61,15 +60,29 @@
 
 
     function buildPeopleView () {
+
         console.log("Building People View...");
 
-        var peopleView =
-                $('<table/>',{id:'people-view'})
-                        .append(
-                            $('<thead/>',{id:'people-view-controls'}),
-                            $('<tbody/>',{id:'people-view-content'}).append(
-                                $('<tr/>',{id:'loading-indicator',text:'Loading People list...'}))
-                        ).appendTo('#content');
+        /*------- CONTROLS -------*/
+
+        $('<table/>',{id:'people-view-controls-table'}).append(
+                $('<tbody/>',{id:'people-view-controls-content'}).append(
+                        $('<tr/>',{
+                            id:'people-view-controls',
+                            text:'PEOPLE VIEW CONTROLS'}))
+        ).appendTo('#content');
+
+
+        /*------- CONTENT -------*/
+
+        $('<table/>',{id:'people-view-table'}).append(
+
+                $('<tbody/>',{id:'people-view-content'}).append(
+                        $('<tr/>',{
+                            id:'loading-indicator',
+                            text:'Loading People list...'}))
+
+        ).appendTo('#content');
 
 
         google.script.run.withSuccessHandler(addPeople).getPeopleListFromSheet('active');

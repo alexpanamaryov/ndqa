@@ -1,0 +1,23 @@
+<script type="text/javascript" id="buildNewTestView">
+
+    function buildNewTestView() {
+
+        console.log("Building 'New Test' View...");
+
+        $('<div/>',{id:'new-test-view'}).append(
+
+                $('<table/>',{id:'nt-table'}).append(
+
+                        $('<thead/>',{id:'ntt-thead'}),
+
+                        $('<tfoot/>',{id:'ntt-tfoot'}),
+
+                        $('<tbody/>',{id:'ntt-tbody'})
+
+                )
+
+        ).appendTo('#content');
+
+    }
+
+</script>

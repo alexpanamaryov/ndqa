@@ -1,113 +1,154 @@
 <style type="text/css" id="people-view-styles">
 
-    #people-view {
-       /*position: relative;*/
-        /*display: block;*/
+    #people-view-controls-table {
+        display: table;
+        position: relative;
 
-        /*margin: 0;
-        padding: 0;*/
+        width: 100%;
+
+        margin-bottom: 20px;
+        padding: 0;
+
+        /*border-collapse: collapse;*/
+    }
+
+    #people-view-controls-content {
+        margin: 0;
+        padding: 0;
+        border: 1px solid #9f9f9f;
     }
 
     #people-view-controls {
+        display: table-row;
 
+        height: 100px;
+        width: 100%;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    #people-view-table {
+        display: table;
+        position: relative;
+
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        /*border-collapse: separate;
+        border-spacing: 0 20px;*/
+
+        /*border: 1px solid #9f9f9f;*/
     }
 
     #people-view-content {
+        /*display: table-column-group;*/
 
+        margin: 0;
+        padding: 0;
+
+        /*border-collapse: separate;
+        border-spacing: 25px;*/
     }
 
     .person-view {
         /*position: relative;*/
 
-        /*display: block;
+        display: table-row;
 
-        height: 50px;
+        height: 75px;
         width: 100%;
 
-        clar: both;*/
+        /*clear: both;*/
         /*float: left;*/
 
-        /*padding: 0;
-        margin-bottom: 5px;
+        /*margin-bottom: 20px;*/
+        /*margin-bottom: 5px;*/
 
-        border: 1px solid #000;*/
+        /*padding: 15px;*/
+
+        border: 1px solid #9f9f9f;
     }
 
     .person-avatar {
-        /*position: relative;
-        display: block;
+        /*position: relative;*/
+        display: table-cell;
 
-        float: left;
+        /*float: left;*/
 
-        height: 48px;
-        width: 45px;
+        /*height: 48px;*/
+        width: 65px;
 
-        padding: 0;
-        margin-right: 10px;
+        padding: 3px 3px;
+        /*margin-right: 10px;*/
 
-        border: 1px solid #000;*/
+        border-right: 1px solid #9f9f9f;
     }
 
     .person-info {
-        /*position: relative;
-        display: block;
+        /*position: relative;*/
+        display: table-cell;
+        padding: 5px 5px;
 
-        height: 48px;
+        /*height: 48px;
         float: left;*/
     }
 
     .person-name {
-        /*position: relative;
-        display: block;
+        display: table-row;
 
-        clear: both;
-        float: left;
+        font-size: 12px;
+        font-weight: bold;
 
-        padding: 2px;
-        margin: 0 5px;
 
-        font-size: 14px;
-        font-weight: bold;*/
+        /*margin: 3px 5px;*/
     }
 
 
-
     .person-general-info {
-       /* position: relative;
-        display: block;
+       /* position: relative;*/
+        display: table-row-group;
 
-        clear: both;
+        /*clear: both;
         float: left;*/
     }
 
     .person-company {
+
+        display: table-row;
+
        /* position: relative;
         display: inline;
 
-        float: left;
+        float: left;*/
 
         padding: 2px;
-        margin: 0 5px;*/
+        margin: 0 5px;
     }
 
     .person-location {
        /* position: relative;
         display: inline;
 
-        float: left;
+        float: left;*/
+
+        display: table-row;
 
         padding: 2px;
-        margin-right: 5px;*/
+        margin-right: 5px;
     }
 
     .person-position {
        /* position: relative;
         display: inline;
 
-        float: left;
+        float: left;*/
+
+        display: table-row;
 
         padding: 2px;
-        margin-right: 5px;*/
+        margin-right: 5px;
     }
 
     .person-email {
@@ -115,10 +156,12 @@
         display: block;
 
         clear: both;
-        float: left;
+        float: left;*/
+
+        display: table-row;
 
         padding: 2px;
-        margin: 0 5px;*/
+        margin: 0 5px;
     }
 
 </style>
